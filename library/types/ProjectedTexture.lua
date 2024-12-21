@@ -223,6 +223,13 @@ function ProjectedTexture:setLinearAttenuation(attenuation) end
 function ProjectedTexture:setNearZ(nearZ) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
+--- Sets the view-frustum culling of the Projected Texture.
+--- Will not take effect until ProjectedTexture:update() is called.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/light.lua#L513).
+---@param enable boolean #
+function ProjectedTexture:setNoCull(enable) end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the orthographic settings of the Projected Texture.
 --- Does not work with shadows.
 --- Will not take effect until ProjectedTexture:update() is called.
@@ -232,7 +239,7 @@ function ProjectedTexture:setNearZ(nearZ) end
 ---@param top number #
 ---@param right number #
 ---@param bottom number #
-function ProjectedTexture:setNoCull(orthographic, left, top, right, bottom) end
+function ProjectedTexture:setOrthographic(orthographic, left, top, right, bottom) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the Projected Texture's position.
