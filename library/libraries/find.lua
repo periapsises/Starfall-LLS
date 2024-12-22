@@ -7,21 +7,21 @@ find = {}
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Finds all entities.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L183).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L181).
 ---@param filter function? # Optional function to filter results
 ---@return table # An array of found entities
 function find.all(filter) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Finds all players (including bots).
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L174).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L172).
 ---@param filter function? # Optional function to filter results
 ---@return table # An array of found entities
 function find.allPlayers(filter) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Finds entities by class name.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L128).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L127).
 ---@param class string # The class name
 ---@param filter function? # Optional function to filter results
 ---@return table # An array of found entities
@@ -29,7 +29,7 @@ function find.byClass(class, filter) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Finds entities by model.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L150).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L149).
 ---@param model string # The model file
 ---@param filter function? # Optional function to filter results
 ---@return table # An array of found entities
@@ -37,7 +37,7 @@ function find.byModel(model, filter) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Finds entities by their targetname.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L139).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L138).
 ---@param name string # The targetname
 ---@param filter function? # Optional function to filter results
 ---@return table # An array of found entities
@@ -45,7 +45,7 @@ function find.byName(name, filter) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Finds the closest entity to a point.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L192).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L190).
 ---@param ents table # The array of entities
 ---@param pos Vector # The position
 ---@return Entity # The closest entity
@@ -53,14 +53,14 @@ function find.closest(ents, pos) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns entity that has given Entity:mapCreationID.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L288).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L286).
 ---@param num number # Entity's creation id
 ---@return Entity? # The found entity or nil if not found
 function find.getMapCreatedEntity(num) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Finds entities in a box.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L63).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L68).
 ---@param min Vector # Bottom corner
 ---@param max Vector # Top corner
 ---@param filter function? # Optional function to filter results
@@ -69,7 +69,7 @@ function find.inBox(min, max, filter) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Finds entities in a cone.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L90).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L91).
 ---@param pos Vector # The cone vertex position
 ---@param dir Vector # The direction to project the cone
 ---@param distance number # The length to project the cone
@@ -80,7 +80,7 @@ function find.inCone(pos, dir, distance, radius, filter) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Finds entities that are in the PVS (Potentially Visible Set). See: https://developer.valvesoftware.com/wiki/PVS.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L162).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L161).
 ---@param pos Vector # Vector view point
 ---@param filter function? # Optional function to filter results
 ---@return table # An array of found entities
@@ -88,7 +88,7 @@ function find.inPVS(pos, filter) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Finds entities in a ray.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L107).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L106).
 ---@param startpos Vector # The ray start
 ---@param endpos Vector # The ray end
 ---@param mins Vector? # If not nil, will define a lower bound of the ray's hull
@@ -99,7 +99,7 @@ function find.inRay(startpos, endpos, mins, maxs, filter) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Finds entities in a sphere.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L76).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L79).
 ---@param center Vector # Center of the sphere
 ---@param radius number # Sphere radius
 ---@param filter function? # Optional function to filter results
@@ -108,21 +108,21 @@ function find.inSphere(center, radius, filter) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Finds the player with the given a steamid. Returns nil if not found.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L272).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L270).
 ---@param steamid string # Steam Id to search for
 ---@return Player? # The player with matching steamid
 function find.playerBySteamID(steamid) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Finds the player with the given a 64-bit steamid. Returns nil if not found.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L280).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L278).
 ---@param steamid string # 64-bit steam id to search for
 ---@return Player? # The player with matching steamid
 function find.playerBySteamID64(steamid) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Finds the first player with the given name.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L235).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L233).
 ---@param name string # Name to search for
 ---@param casesensitive boolean? # Boolean should the match be case sensitive?
 ---@param exact boolean? # Boolean should the name match exactly
@@ -131,7 +131,7 @@ function find.playersByName(name, casesensitive, exact) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns a sorted array of entities by how close they are to a point.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L211).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L209).
 ---@param ents table # The array of entities
 ---@param pos Vector # The position
 ---@param furthest boolean # Whether to have the further entities first

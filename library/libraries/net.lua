@@ -145,21 +145,21 @@ function net.receive(name, func) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Send a net message from client->server, or server->client.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L92).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L94).
 ---@param target Player|table|nil # Optional target location to send the net message. Player or table of targets. If nil, sends to server on client
 ---@param unreliable boolean? # Optional choose whether it's more important for the message to actually reach its destination (false) or reach it as fast as possible (true).
 function net.send(target, unreliable) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Send net message to all players within the visible area of a vector.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L130).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L132).
 ---@param pos Vector # A vector within the PVS area to send a message
 ---@param unreliable boolean? # Optional choose whether it's more important for the message to actually reach its destination (false) or reach it as fast as possible (true).
 function net.sendPVS(pos, unreliable) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Starts the net message.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L78).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L80).
 ---@param name string # The message name
 function net.start(name) end
 
