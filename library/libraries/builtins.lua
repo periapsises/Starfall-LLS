@@ -777,7 +777,7 @@ function Angle(p, y, r) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Creates a table struct that resembles a Color.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/color.lua#L64).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/color.lua#L77).
 ---@param number any # |string? r Red component or string hexadecimal color. Defaults to 255.
 ---@param g number? # Green component. Defaults to 255.
 ---@param b number? # Blue component. Defaults to 255.
