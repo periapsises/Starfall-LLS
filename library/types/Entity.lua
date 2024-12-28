@@ -141,7 +141,7 @@ function Entity:entIndex() end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the game assigned owner of an entity. This doesn't take CPPI into account and will return nil for most standard entities.
 --- Used on entities with custom physics like held SWEPs and fired bullets in which case player entity should be returned.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1728).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1729).
 ---@return Entity # Owner
 function Entity:entOwner() end
 
@@ -165,19 +165,19 @@ function Entity:getAmount() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the angular velocity of the entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1307).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1308).
 ---@return Vector # The angular velocity as a vector
 function Entity:getAngleVelocity() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the angular velocity of the entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1316).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1317).
 ---@return Angle # The angular velocity as an angle
 function Entity:getAngleVelocityAngle() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the angle of the entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1260).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1261).
 ---@return Angle # The angle
 function Entity:getAngles() end
 
@@ -266,13 +266,13 @@ function Entity:getBonePosition(bone) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the distance between the center of the entity's bounding box and whichever corner of the bounding box is farthest away.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1918).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1919).
 ---@return number # The radius of the bounding box, or 0 for some entities such as worldspawn
 function Entity:getBoundingRadius() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns info about the given brush plane.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1810).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1811).
 ---@param id number # Plane index. Starts from 0
 ---@return Vector # The origin of the plane
 ---@return Vector # The normal of the plane
@@ -281,13 +281,13 @@ function Entity:getBrushPlane(id) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the amount of planes of the brush entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1822).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1823).
 ---@return number # The amount of brush planes
 function Entity:getBrushPlaneCount() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns a table of brushes surfaces for brush model entities.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1797).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1798).
 ---@return table # Table of SurfaceInfos if the entity has a brush model, or no value otherwise.
 function Entity:getBrushSurfaces() end
 
@@ -348,55 +348,55 @@ function Entity:getCreationID() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the timer.curtime() time the entity was created on.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1695).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1696).
 ---@return number # Seconds relative to server map start
 function Entity:getCreationTime() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets a datatable angle.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1829).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1830).
 ---@param key number # The number key. Valid keys are 0 - 31
 ---@return Angle? # The angle or nil if it doesn't exist
 function Entity:getDTAngle(key) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets a datatable boolean.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1839).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1840).
 ---@param key number # The number key. Valid keys are 0 - 31
 ---@return boolean? # The boolean or nil if it doesn't exist
 function Entity:getDTBool(key) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets a datatable entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1849).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1850).
 ---@param key number # The number key. Valid keys are 0 - 31
 ---@return Entity? # The entity or nil if it doesn't exist
 function Entity:getDTEntity(key) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets a datatable float.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1859).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1860).
 ---@param key number # The number key. Valid keys are 0 - 31
 ---@return number? # The float or nil if it doesn't exist
 function Entity:getDTFloat(key) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets a datatable int.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1869).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1870).
 ---@param key number # The number key. Valid keys are 0 - 31
 ---@return number? # The int or nil if it doesn't exist
 function Entity:getDTInt(key) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets a datatable string.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1879).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1880).
 ---@param key number # The number key. Valid keys are 0 - 31
 ---@return string? # The string or nil if it doesn't exist
 function Entity:getDTString(key) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets a datatable vector.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1889).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1890).
 ---@param key number # The number key. Valid keys are 0 - 31
 ---@return Vector? # The vector or nil if it doesn't exist
 function Entity:getDTVector(key) end
@@ -422,53 +422,53 @@ function Entity:getErroredPlayers() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the entity's eye angles.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1627).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1628).
 ---@return Angle # Angles of the entity's eyes
 function Entity:getEyeAngles() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the entity's eye position.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1634).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1635).
 ---@return Vector # Eye position of the entity
 ---@return Vector? # In case of a ragdoll, the position of the second eye
 function Entity:getEyePos() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the ID of the flex based on given name.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1493).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1494).
 ---@param flexname string # The name of the flex to get the ID of. Case sensitive.
 ---@return number # The ID of the flex based on given name.
 function Entity:getFlexByName(flexname) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns flex name.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1501).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1502).
 ---@param flexid number # The flex id to look up name of.
 ---@return string # The flex name
 function Entity:getFlexName(flexid) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the scale of the entity flexes.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1554).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1555).
 ---@return number # The scale of the flexes
 function Entity:getFlexScale() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the weight (value) of a flex.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1515).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1516).
 ---@param flexid number # The id of the flex
 ---@return number # The weight of the flex
 function Entity:getFlexWeight(flexid) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns a table of flexname -> flexid pairs for use in flex functions.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1482).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1483).
 ---@return table # Table of flexes
 function Entity:getFlexes() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the entity's forward vector.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1688).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1689).
 ---@return Vector # Vector forward
 function Entity:getForward() end
 
@@ -480,13 +480,13 @@ function Entity:getFriction() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the health of an entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1620).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1621).
 ---@return number # Health of the entity
 function Entity:getHealth() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the bone the given hitbox is attached to.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1760).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1761).
 ---@param hitbox number # The number of the hitbox.
 ---@param group number # The number of the hitbox group, 0 in most cases.
 ---@return number # Bone ID
@@ -494,7 +494,7 @@ function Entity:getHitBoxBone(hitbox, group) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the bounds (min and max corners) of a hit box.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1736).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1737).
 ---@param hitbox number # The number of the hitbox.
 ---@param group number # The number of the hitbox group, 0 in most cases.
 ---@return Vector # Hitbox mins vector.
@@ -503,14 +503,14 @@ function Entity:getHitBoxBounds(hitbox, group) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets number of hitboxes in a group.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1751).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1752).
 ---@param group number # The number of the hitbox group.
 ---@return number # Number of hitboxes
 function Entity:getHitBoxCount(group) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the hit group of a given hitbox in a given hitbox set.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1786).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1787).
 ---@param hitbox number # The number of the hit box.
 ---@param hitboxset number # The number of the hit box set. This should be 0 in most cases.
 ---@return number # The hitbox group of given hitbox. See https://wiki.facepunch.com/gmod/Enums/HITGROUP
@@ -518,26 +518,26 @@ function Entity:getHitBoxHitGroup(hitbox, hitboxset) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns entity's current hit box set.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1771).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1772).
 ---@return number? # Hitbox set number, nil if entity has no hitboxes.
 ---@return string? # Hitbox set name, nil if entity has no hitboxes.
 function Entity:getHitBoxSet() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns entity's number of hitbox sets.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1779).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1780).
 ---@return number # Number of hitbox sets.
 function Entity:getHitBoxSetCount() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the principle moments of inertia of the entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1283).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1284).
 ---@return Vector # The principle moments of inertia as a vector
 function Entity:getInertia() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns a variable from the entity's save table.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1952).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1953).
 ---@param variableName string # Name of the internal save table variable.
 ---@return any # The internal variable associated with the name.
 function Entity:getInternalVariable(variableName) end
@@ -557,7 +557,7 @@ function Entity:getLinkedComponents() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the angle of the entity, local to its parent.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1267).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1268).
 ---@return Angle # The angle
 function Entity:getLocalAngles() end
 
@@ -569,7 +569,7 @@ function Entity:getLocalPos() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the velocity of the entity in its local coordinate system.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1299).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1300).
 ---@return Vector # Vector velocity of the physics object local to itself
 function Entity:getLocalVelocity() end
 
@@ -603,7 +603,7 @@ function Entity:getManipulateBoneScale(bone) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the mass of the entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1274).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1275).
 ---@return number # The numerical mass
 function Entity:getMass() end
 
@@ -621,13 +621,13 @@ function Entity:getMassCenterW() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets an entities' material.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1646).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1647).
 ---@return string # String material
 function Entity:getMaterial() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets an entities' material list.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1666).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1667).
 ---@return table # Material
 function Entity:getMaterials() end
 
@@ -639,39 +639,39 @@ function Entity:getMatrix() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the max health of an entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1613).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1614).
 ---@return number # Max Health of the entity
 function Entity:getMaxHealth() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the model of an entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1575).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1576).
 ---@return string # Model of the entity
 function Entity:getModel() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the entity's model bounds. This is different than the collision bounds/hull.
 --- This is not scaled with Entity:SetModelScale and will return the model's original, unmodified mins and maxs.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1582).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1583).
 ---@return Vector # Minimum vector of the bounds
 ---@return Vector # Maximum vector of the bounds
 function Entity:getModelBounds() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the contents of the entity's current model.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1592).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1593).
 ---@return number # Contents of the entity's model. https://wiki.facepunch.com/gmod/Enums/CONTENTS
 function Entity:getModelContents() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the model's radius.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1599).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1600).
 ---@return number # Radius of the model
 function Entity:getModelRadius() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the model's scale.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1606).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1607).
 ---@return number # Scale of the model
 function Entity:getModelScale() end
 
@@ -683,28 +683,28 @@ function Entity:getMoveType() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets a networked variable of an entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1899).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1900).
 ---@param key string # The string key to get
 ---@return any # The object associated with that key or nil if it's not set
 function Entity:getNWVar(key) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the table of all networked things on an entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1911).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1912).
 ---@return table # The table of networked objects
 function Entity:getNWVarTable() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Performs a Ray-Orientated Bounding Box intersection from the given position to the origin of the OBBox with the entity and returns the hit position on the OBBox.
 --- This relies on the entity having a collision mesh (not a physics object) and will be affected by SOLID_NONE.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1934).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1935).
 ---@param The Vector # vector to start the intersection from.
 ---@return Vector # The nearest hit point of the entity's bounding box in world coordinates, or Vector(0, 0, 0) for some entities such as worldspawn.
 function Entity:getNearestPoint(The) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns entity's networked variables table (data table).
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1969).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1970).
 ---@return table? # The networked variables table of the entity or nil if it doesn't have one.
 function Entity:getNetworkVars() end
 
@@ -728,7 +728,7 @@ function Entity:getParent() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Checks if entity is marked as persistent.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1721).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1722).
 ---@return boolean # True if the entity is persistent
 function Entity:getPersistent() end
 
@@ -765,34 +765,34 @@ function Entity:getPos() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Get the pose value of an animation.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1447).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1448).
 ---@param pose string # Pose parameter name
 ---@return number # Value of the pose parameter
 function Entity:getPose(pose) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the amount of pose parameters the entity has.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1454).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1455).
 ---@return number # Amount of poses
 function Entity:getPoseCount() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns pose index corresponding to the given name.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1460).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1461).
 ---@param pose string # Pose name
 ---@return number # Pose index or -1 if not found
 function Entity:getPoseIndex(pose) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns pose name corresponding to the given index.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1467).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1468).
 ---@param id number # Pose index (starting from 0)
 ---@return string # Pose name or empty string if not found
 function Entity:getPoseName(id) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns pose value range.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1474).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1475).
 ---@param id number # Pose index (starting from 0)
 ---@return number? # Minimum pose value or nil if pose not found
 ---@return number? # Maximum pose value or nil if pose not found
@@ -853,46 +853,46 @@ function Entity:getRenderMode() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the entity's right vector.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1681).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1682).
 ---@return Vector # Vector right
 function Entity:getRight() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns a table of save values for an entity.
 --- These tables are not the same between the client and the server, and different entities may have different fields.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1943).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1944).
 ---@param showAll boolean # If set, shows all variables, not just the ones for save.
 ---@return table # A table containing all save values in key/value format. The value may be a sequential table (starting to 1) if the field in question is an array in engine.
 function Entity:getSaveTable(showAll) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the current playing sequence.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1382).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1383).
 ---@return number # The sequence number
 function Entity:getSequence() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the number of animations the entity has.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1415).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1416).
 ---@return number # Count of entity's animations
 function Entity:getSequenceCount() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets various information about the specified animation.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1396).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1397).
 ---@param id number # The ID of the animation
 ---@return table # Animation info
 function Entity:getSequenceInfo(id) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns all animations of the entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1409).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1410).
 ---@return table # List of animations, starts at index 0 where value is the animation's name
 function Entity:getSequenceList() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the name of a sequence.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1388).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1389).
 ---@param id number # The id of the animation
 ---@return string # The sequence name
 function Entity:getSequenceName(id) end
@@ -938,7 +938,7 @@ function Entity:getSolidFlags() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets an entities' submaterial.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1654).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1655).
 ---@param index number # Number index of the sub material
 ---@return string # String material
 function Entity:getSubMaterial(index) end
@@ -951,7 +951,7 @@ function Entity:getTable() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the entity's up vector.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1674).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1675).
 ---@return Vector # Vector up
 function Entity:getUp() end
 
@@ -964,7 +964,7 @@ function Entity:getVar(key) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the velocity of the entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1292).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1293).
 ---@return Vector # The velocity vector
 function Entity:getVelocity() end
 
@@ -982,7 +982,7 @@ function Entity:getWirelink() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns whether or not the the entity has had flex manipulations performed with Entity:setFlexWeight or Entity:setFlexScale.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1509).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1510).
 ---@return boolean # True if the entity has flex manipulations, false otherwise.
 function Entity:hasFlexManipulations() end
 
@@ -1015,13 +1015,13 @@ function Entity:isDoor() end
 --- Returns whether the entity is dormant or not, i.e. whether or not information about the entity is being sent to your client. Not to be confused with PhysObj:isAsleep.
 --- Clientside, this will usually be true if the object is outside of your PVS (potentially visible set).
 --- Serverside, this will almost always be false.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1925).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1926).
 ---@return boolean # Whether entity is dormant or not.
 function Entity:isDormant() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Checks if an engine effect is applied to the entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1702).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1703).
 ---@param effect number # The effect to check. EF table values
 ---@return boolean # True or false
 function Entity:isEffectActive(effect) end
@@ -1089,7 +1089,7 @@ function Entity:isPlayerHolding() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Checks whether the animation is playing.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1421).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1422).
 ---@return boolean # True if the animation is currently playing, False otherwise
 function Entity:isSequenceFinished() end
 
@@ -1137,21 +1137,21 @@ function Entity:linkComponent(e) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Converts a vector in entity local space to world space.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1326).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1327).
 ---@param data Vector # Local space vector
 ---@return Vector # data as world space vector
 function Entity:localToWorld(data) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Converts an angle in entity local space to world space.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1342).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1343).
 ---@param data Angle # Local space angle
 ---@return Angle # data as world space angle
 function Entity:localToWorldAngles(data) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Converts a direction vector in entity local space to world space.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1334).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1335).
 ---@param data Vector # Local space vector direction
 ---@return Vector # data as world space vector direction
 function Entity:localToWorldVector(data) end
@@ -1179,7 +1179,7 @@ function Entity:lookupBone(name) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the animation number from the animation name.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1374).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1375).
 ---@param animation string # Name of the animation
 ---@return number # Animation index or -1 if invalid
 function Entity:lookupSequence(animation) end
@@ -1214,7 +1214,7 @@ function Entity:manipulateBoneScale(bone, vec) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns entity's map creation ID. Unlike Entity:entIndex or Entity:getCreationID, it will always be the same on same map, no matter how much you clean up or restart it.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1962).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1963).
 ---@return number # The map creation ID or -1 if the entity is not compiled into the map.
 function Entity:mapCreationID() end
 
@@ -1266,7 +1266,7 @@ function Entity:removeTrails() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Get the length of an animation.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1427).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1428).
 ---@param id number? # (Optional) The id of the sequence, or will default to the currently playing sequence
 ---@return number # Length of the animation in seconds
 function Entity:sequenceDuration(id) end
@@ -1352,13 +1352,13 @@ function Entity:setElasticity(elasticity) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Sets the scale of the entity flexes.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1560).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1561).
 ---@param scale number # The scale of the flexes to set
 function Entity:setFlexScale(scale) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Sets the weight (value) of a flex.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1531).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1532).
 ---@param flexid number # The id of the flex
 ---@param weight number # The weight of the flex
 function Entity:setFlexWeight(flexid, weight) end
@@ -1465,7 +1465,7 @@ function Entity:setParent(parent, attachment, bone) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Marks entity as persistent, disallowing players from physgunning it. Persistent entities save on server shutdown when sbox_persist is set.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1711).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1712).
 ---@param persist boolean # True to make persistent
 function Entity:setPersistent(persist) end
 
@@ -1493,7 +1493,7 @@ function Entity:setPos(vec) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Set the pose value of an animation. Turret/Head angles for example.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1437).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1438).
 ---@param pose string # Name of the pose parameter
 ---@param value number # Value to set it to.
 function Entity:setPose(pose, value) end
@@ -1616,21 +1616,21 @@ function Entity:worldSpaceAABB() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Converts a vector in world space to entity local space.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1350).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1351).
 ---@param data Vector # World space vector
 ---@return Vector # data as local space vector
 function Entity:worldToLocal(data) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Converts an angle in world space to entity local space.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1366).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1367).
 ---@param data Angle # World space angle
 ---@return Angle # data as local space angle
 function Entity:worldToLocalAngles(data) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Converts a direction vector in world space to entity local space.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1358).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1359).
 ---@param data Vector # World space direction vector
 ---@return Vector # data as local space direction vector
 function Entity:worldToLocalVector(data) end
