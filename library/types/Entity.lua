@@ -86,7 +86,7 @@ function Entity:doNotDuplicate() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Get the DarkRP door index of a door. Use this to store door information in the database.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L815).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L870).
 ---@return number? # The door index, or nil if not a door.
 function Entity:doorIndex() end
 
@@ -155,13 +155,6 @@ function Entity:extinguish() end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L935).
 ---@param filter table? # Optional constraint type filter table where keys are the type name and values are 'true'. "Wire" and "Parent" are used for wires and parents.
 function Entity:getAllConstrained(filter) end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Get the amount of money in a "money bag" or cheque, or number of items in a dropped item stack. DarkRP only.
---- Equivalent to GLua Entity:Getamount.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L870).
----@return number? # Amount of money or number of items
-function Entity:getAmount() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the angular velocity of the entity.
@@ -333,13 +326,6 @@ function Entity:getCollisionGroup() end
 ---@return Color # Color
 function Entity:getColor() end
 
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Get the number of items remaining in a shipment. DarkRP only.
---- Equivalent to GLua Entity:Getcount.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L878).
----@return number? # Number of items remaining, or nil if not a shipment
-function Entity:getCount() end
-
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns entity's creation ID (similar to entIndex, but increments monotonically).
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1071).
@@ -403,7 +389,7 @@ function Entity:getDTVector(key) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Get the owner of a door. DarkRP only.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L830).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L885).
 ---@return Player? # The owner of the door, or nil if the door is unowned.
 function Entity:getDoorOwner() end
 
@@ -545,7 +531,7 @@ function Entity:getInternalVariable(variableName) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Get the title of this door or vehicle. DarkRP only.
 --- If you don't know what this is referring to, that's because it's not a commonly used feature. Press F2 on a door and click "Set Door Title".
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L837).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L892).
 ---@return string? # The title of the door or vehicle, or nil if none is set.
 function Entity:getKeysTitle() end
 
@@ -674,6 +660,13 @@ function Entity:getModelRadius() end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1607).
 ---@return number # Scale of the model
 function Entity:getModelScale() end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- Get the amount of money in a "money bag" or cheque, or number of items in a dropped item stack. DarkRP only.
+--- Equivalent to GLua Entity:Getamount.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L925).
+---@return number? # Amount of money or number of items
+function Entity:getMoneyAmount() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the movetype enum of the entity.
@@ -900,7 +893,7 @@ function Entity:getSequenceName(id) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Get the info for the contents of the shipment. DarkRP only.
 --- Equivalent to "darkrp.getCustomShipments()[ent:getShipmentContentsIndex()]".
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L895).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L950).
 ---@return table? # Contents, or nil if not a shipment
 function Entity:getShipmentContents() end
 
@@ -908,9 +901,16 @@ function Entity:getShipmentContents() end
 --- Get the index of the contents of the shipment, which should then be looked up in the output of "darkrp.getCustomShipments". DarkRP only.
 --- Equivalent to GLua Entity:Getcontents.
 --- You may prefer to use Entity:getShipmentContents instead, although that function is slightly slower.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L886).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L941).
 ---@return number? # Index of contents, or nil if not a shipment
 function Entity:getShipmentContentsIndex() end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- Get the number of items remaining in a shipment. DarkRP only.
+--- Equivalent to GLua Entity:Getcount.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L933).
+---@return number? # Number of items remaining, or nil if not a shipment
+function Entity:getShipmentCount() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the skin number of the entity.
@@ -1007,7 +1007,7 @@ function Entity:isConstraint() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Get whether this entity is considered a door by DarkRP.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L844).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L899).
 ---@return boolean # Whether it's a door.
 function Entity:isDoor() end
 
@@ -1034,26 +1034,26 @@ function Entity:isFrozen() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Get whether this door is owned by someone.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L850).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L905).
 ---@return boolean # Whether it's owned.
 function Entity:isKeysOwned() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Get whether this door is owned or co-owned by this player.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L856).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L911).
 ---@param ply Player # The player to query.
 ---@return boolean # Whether this door is (co-)owned by the player.
 function Entity:isKeysOwnedBy(ply) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Get whether this door/vehicle is locked. DarkRP only.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L822).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L877).
 ---@return boolean # Whether it's locked.
 function Entity:isLocked() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Get whether this entity is a "money bag", i.e. dropped money from a money printer or /dropmoney. DarkRP only.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L864).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L919).
 ---@return boolean # Whether this entity is a money bag.
 function Entity:isMoneyBag() end
 
