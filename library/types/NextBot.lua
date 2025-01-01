@@ -276,8 +276,8 @@ function NextBot:setAcceleration(newaccel) end
 --- Makes the nextbot try to go to a specified position without using navmesh pathfinding (in a straight line).
 --- setGotoPos takes priority.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L128).
----@param goal Vector # The vector we want to get to.
-function NextBot:setApproachPos(goal) end
+---@param pos Vector # The vector we want to get to.
+function NextBot:setApproachPos(pos) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets whether the Nextbot is allowed try to to avoid obstacles or not. This is used during path generation. Works similarly to nb_allow_avoiding convar. By default bots are allowed to try to avoid obstacles.
