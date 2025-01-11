@@ -50,6 +50,12 @@ function input.isControlDown() end
 function input.isControlLocked() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
+--- Returns whether the game menu overlay ( main menu ) is open or not.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/input.lua#L392).
+---@return boolean # Whether the game menu overlay ( main menu ) is open or not
+function input.isGameUIVisible() end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Gets whether a key is down.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/input.lua#L245).
 ---@param key number # The key id, see input
