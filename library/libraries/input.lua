@@ -18,6 +18,13 @@ function input.canLockControls() end
 function input.enableCursor(enabled) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
+--- Returns the digital value of an analog stick on the current (set up via convars) controller.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/input.lua#L399).
+---@param axis number # The analog axis to poll. See https://wiki.facepunch.com/gmod/Enums/ANALOG
+---@return number # The digital value.
+function input.getAnalogValue(axis) end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Gets the position of the mouse.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/input.lua#L300).
 ---@return number # The x position of the mouse
