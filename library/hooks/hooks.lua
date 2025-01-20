@@ -90,6 +90,7 @@
 ---| '"PostEntityFireBullets"' #  Called after a bullet is fired and it's trace has been calculated
 ---| '"PreDrawHUD"' #  Called before drawing HUD (2D Context)
 ---| '"PreDrawOpaqueRenderables"' #  Called before opaque entities are drawn. (Only works with HUD) (3D context)
+---| '"PreDrawPlayer"' #  Called before drawing the player. (Only works with HUD) (3D Context)
 ---| '"PreDrawSkyBox"' #  Called before the 3D skybox is drawn. This will not be called for maps with no 3D skybox, or when the 3d skybox is disabled
 ---| '"PreDrawTranslucentRenderables"' #  Called before translucent entities are drawn. (Only works with HUD) (3D context)
 ---| '"PreDrawViewModels"' #  Called before drawing the viewmodel rendergroup (3D Context)
@@ -212,9 +213,10 @@
 ---@alias PostDrawTranslucentRenderables fun(depth: boolean, skybox: boolean, skybox3d: boolean)
 ---@alias PostEntityFireBullets fun(ent: Entity, data: table)
 ---@alias PreDrawHUD fun()
----@alias PreDrawOpaqueRenderables fun(depth: boolean, skybox: boolean, skybox3d: boolean)
+---@alias PreDrawOpaqueRenderables fun(depth: boolean, skybox: boolean, skybox3d: boolean) : boolean
+---@alias PreDrawPlayer fun(ply: Player, flags: number) : boolean
 ---@alias PreDrawSkyBox fun() : boolean
----@alias PreDrawTranslucentRenderables fun(depth: boolean, skybox: boolean, skybox3d: boolean)
+---@alias PreDrawTranslucentRenderables fun(depth: boolean, skybox: boolean, skybox3d: boolean) : boolean
 ---@alias PreDrawViewModels fun()
 ---@alias PropBreak fun(ply: Player, ent: Entity)
 ---@alias ReadCell fun(address: any) : any
