@@ -84,12 +84,6 @@ function Entity:canDraw() end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1071).
 function Entity:doNotDuplicate() end
 
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
---- Get the DarkRP door index of a door. Use this to store door information in the database.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L870).
----@return number? # The door index, or nil if not a door.
-function Entity:doorIndex() end
-
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Draws the entity, requires 3D rendering context.
 --- Only certain, whitelisted entities can be drawn. They can't be parented or have RenderOverride defined.
@@ -397,12 +391,6 @@ function Entity:getDTString(key) end
 function Entity:getDTVector(key) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Get the owner of a door. DarkRP only.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L885).
----@return Player? # The owner of the door, or nil if the door is unowned.
-function Entity:getDoorOwner() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the elasticity of the entity.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L818).
 ---@return number # Elasticity
@@ -538,13 +526,6 @@ function Entity:getInertia() end
 function Entity:getInternalVariable(variableName) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Get the title of this door or vehicle. DarkRP only.
---- If you don't know what this is referring to, that's because it's not a commonly used feature. Press F2 on a door and click "Set Door Title".
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L892).
----@return string? # The title of the door or vehicle, or nil if none is set.
-function Entity:getKeysTitle() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns a list of components linked to a processor. Can also return vehicles linked to a HUD, but only through the server.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L375).
 ---@return table # A list of components linked to the entity
@@ -669,13 +650,6 @@ function Entity:getModelRadius() end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1646).
 ---@return number # Scale of the model
 function Entity:getModelScale() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Get the amount of money in a "money bag" or cheque, or number of items in a dropped item stack. DarkRP only.
---- Equivalent to GLua Entity:Getamount.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L925).
----@return number? # Amount of money or number of items
-function Entity:getMoneyAmount() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the movetype enum of the entity.
@@ -900,28 +874,6 @@ function Entity:getSequenceList() end
 function Entity:getSequenceName(id) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Get the info for the contents of the shipment. DarkRP only.
---- Equivalent to "darkrp.getCustomShipments()[ent:getShipmentContentsIndex()]".
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L950).
----@return table? # Contents, or nil if not a shipment
-function Entity:getShipmentContents() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Get the index of the contents of the shipment, which should then be looked up in the output of "darkrp.getCustomShipments". DarkRP only.
---- Equivalent to GLua Entity:Getcontents.
---- You may prefer to use Entity:getShipmentContents instead, although that function is slightly slower.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L941).
----@return number? # Index of contents, or nil if not a shipment
-function Entity:getShipmentContentsIndex() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Get the number of items remaining in a shipment. DarkRP only.
---- Equivalent to GLua Entity:Getcount.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L933).
----@return number? # Number of items remaining, or nil if not a shipment
-function Entity:getShipmentCount() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the skin number of the entity.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L640).
 ---@return number # Skin number
@@ -1015,12 +967,6 @@ function Entity:ignite(length, radius) end
 function Entity:isConstraint() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Get whether this entity is considered a door by DarkRP.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L899).
----@return boolean # Whether it's a door.
-function Entity:isDoor() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns whether the entity is dormant or not, i.e. whether or not information about the entity is being sent to your client. Not to be confused with PhysObj:isAsleep.
 --- Clientside, this will usually be true if the object is outside of your PVS (potentially visible set).
 --- Serverside, this will almost always be false.
@@ -1040,31 +986,6 @@ function Entity:isEffectActive(effect) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L857).
 ---@return boolean # True if entity is frozen
 function Entity:isFrozen() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Get whether this door is owned by someone.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L905).
----@return boolean # Whether it's owned.
-function Entity:isKeysOwned() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Get whether this door is owned or co-owned by this player.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L911).
----@param ply Player # The player to query.
----@return boolean # Whether this door is (co-)owned by the player.
-function Entity:isKeysOwnedBy(ply) end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
---- Get whether this door/vehicle is locked. DarkRP only.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L877).
----@return boolean # Whether it's locked.
-function Entity:isLocked() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Get whether this entity is a "money bag", i.e. dropped money from a money printer or /dropmoney. DarkRP only.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L919).
----@return boolean # Whether this entity is a money bag.
-function Entity:isMoneyBag() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Checks if an entity is an npc.

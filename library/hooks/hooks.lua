@@ -148,7 +148,7 @@
 ---@alias HUDShouldDraw fun(str: string) : boolean
 ---@alias HologramMatrix fun()
 ---@alias Input fun(input: string, value: any)
----@alias InputBindPressed fun(bind: string)
+---@alias InputBindPressed fun(bind: string) : boolean
 ---@alias InputPressed fun(button: number)
 ---@alias InputReleased fun(button: number)
 ---@alias KeyPress fun(ply: Player, key: number)

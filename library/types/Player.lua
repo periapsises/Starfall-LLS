@@ -6,27 +6,6 @@
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L85).
 local Player = {}
 
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Get whether the player can afford the given amount of money. DarkRP only.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L1024).
----@param amount number # The amount of money
----@return boolean # Whether the player can afford it
-function Player:canAfford(amount) end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Get whether the player can lock a given door. DarkRP only.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L1032).
----@param door Entity # The door
----@return boolean? # Whether the player is allowed to lock the door. May be nil instead of false.
-function Player:canKeysLock(door) end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Get whether the player can unlock a given door. DarkRP only.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L1039).
----@param door Entity # The door
----@return boolean? # Whether the player is allowed to unlock the door. May be nil instead of false.
-function Player:canKeysUnlock(door) end
-
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Drops the player's weapon.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L561).
@@ -84,16 +63,6 @@ function Player:getArmor() end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L157).
 ---@return number # Crouch Walk Speed value
 function Player:getCrouchedWalkSpeed() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Get the value of a DarkRPVar, which is shared between server and client. Case-sensitive.
---- Possible variables include (but are not limited to): AFK, AFKDemoted, money, salaryRL, rpname, job, HasGunlicense, Arrested, wanted, wantedReason, agenda, zombieToggle, hitTarget, hitPrice, lastHitTime, Energy.
---- For money specifically, you may optionally use Player:getMoney instead.
---- Some variables may be blacklisted so that you can't read their value.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L1046).
----@param var string # The name of the variable.
----@return any # The value of the DarkRP var.
-function Player:getDarkRPVar(var) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the player's death ragdoll.
@@ -156,12 +125,6 @@ function Player:getFriendStatus() end
 function Player:getGroundEntity() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Get the job table of a player. DarkRP only.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L1058).
----@return table # Table with the job information.
-function Player:getJobTable() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the players Jump Power.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L213).
 ---@return number # Jump Power value
@@ -184,13 +147,6 @@ function Player:getMaxArmor() end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L185).
 ---@return number # Max Speed value
 function Player:getMaxSpeed() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Get the amount of money this player has. DarkRP only.
---- Equivalent to "ply:getDarkRPVar('money')".
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L1131).
----@return number? # The amount of money, or nil if not accessible.
-function Player:getMoney() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the player's name.
@@ -217,12 +173,6 @@ function Player:getPing() end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L471).
 ---@return Vector # The color
 function Player:getPlayerColor() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Get a player's pocket items. DarkRP only.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L1064).
----@return table # A table containing information about the items in the pocket.
-function Player:getPocketItems() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the players Run Speed, which is +speed.
@@ -338,12 +288,6 @@ function Player:getViewPunchAngles() end
 function Player:getWalkSpeed() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Get the reason why someone is wanted. DarkRP only.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L1070).
----@return string? # The reason, or nil if not wanted
-function Player:getWantedReason() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the specified weapon or nil if the player doesn't have it.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L453).
 ---@param wep string # Weapon class name
@@ -363,19 +307,6 @@ function Player:getWeaponColor() end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L446).
 ---@return table # Table of weapons
 function Player:getWeapons() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
---- Give this player money.
---- This is subject to a burst limit. Use the darkrp.canGiveMoney function to check if you can request money that tick.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L997).
----@param amount number # The amount of money to give.
-function Player:giveMoney(amount) end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Whether the player has a certain DarkRP privilege.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L1076).
----@return boolean # Whether the player has the privilege.
-function Player:hasDarkRPPrivilege() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns whether or not the player has godmode.
@@ -402,40 +333,16 @@ function Player:isAdmin() end
 function Player:isAlive() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Whether this player is arrested. DarkRP only.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L1083).
----@return boolean? # Whether this player is arrested. May be nil instead of false.
-function Player:isArrested() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns whether the player is a bot.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L332).
 ---@return boolean # True if player is a bot
 function Player:isBot() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Whether this player is part of the police force (Mayor, CP, Chief). DarkRP only.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L1101).
----@return boolean # Whether this player is a part of the police force.
-function Player:isCP() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Whether this player is a Chief. DarkRP only.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L1089).
----@return boolean? # Whether this player is a Chief. May be nil instead of false.
-function Player:isChief() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns whether the player is connected.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L667).
 ---@return boolean # True if player is connected
 function Player:isConnected() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Whether this player is a cook. DarkRP only. Only works if hungermod is enabled.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L1095).
----@return boolean? # Whether this player is a cook. May be nil instead of false.
-function Player:isCook() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns whether the player is crouching.
@@ -460,30 +367,6 @@ function Player:isFrozen() end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L536).
 ---@return boolean # True if a HUD component is connected and active for the player, nil otherwise
 function Player:isHUDActive() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Whether this player is a hitman. DarkRP only.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L1107).
----@return boolean? # Whether this player is a hitman. May be nil instead of false.
-function Player:isHitman() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
---- Whether this player is in the same room as the LocalPlayer. DarkRP only.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L1014).
----@return boolean # Whether this player is in the same room.
-function Player:isInRoom() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Whether this player is the Mayor. DarkRP only.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L1113).
----@return boolean? # Whether this player is the Mayor. May be nil instead of false.
-function Player:isMayor() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Whether this player is a medic. DarkRP only.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L1119).
----@return boolean? # Whether this player is a medic. May be nil instead of false.
-function Player:isMedic() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns whether the local player has muted the player.
@@ -548,22 +431,11 @@ function Player:isUserGroup(groupName) end
 function Player:isWalking() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Whether this player is wanted. DarkRP only. Use Player:getWantedReason if you want to know the reason.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L1125).
----@return boolean? # Whether this player is wanted. May be nil instead of false.
-function Player:isWanted() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns whether or not the player is pushing the key.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L841).
 ---@param key number # Key to check. IN_KEY table values
 ---@return boolean # Whether they key is down
 function Player:keyDown(key) end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
---- Unown every door and vehicle owned by this player. DarkRP only.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L962).
-function Player:keysUnOwnAll() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Kills the target.
@@ -585,17 +457,6 @@ function Player:lastHitGroup() end
 ---@param slot number? # Optional int (Default GESTURE_SLOT.CUSTOM), the gesture slot to use. GESTURE_SLOT table values
 ---@param weight number? # Optional float (Default 1), the weight of the gesture. Ranging from 0-1
 function Player:playGesture(animation, loop, slot, weight) end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
---- Request money from a player.
---- This is subject to a burst limit. Use the darkrp.canMakeMoneyRequest function to check if you can request money that tick.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L984).
----@param message string? # An optional custom message that will be shown in the money request prompt. May not exceed 60 bytes in length.
----@param amount number # The amount of money to ask for.
----@param callbackSuccess function? # Optional function to call if request succeeds.
----@param callbackFailure function? # Optional function to call if request fails.
----@param receiver Player? # The player who may or may not receive the money, or the owner of the chip if not specified. Superuser only.
-function Player:requestMoney(message, amount, callbackSuccess, callbackFailure, receiver) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Resets the animation.
@@ -807,14 +668,6 @@ function Player:stripWeapon(weapon) end
 --- Strips all the player's weapons.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L591).
 function Player:stripWeapons() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
---- Returns the time left on a player's team ban. DarkRP only.
---- Only works if the player is the owner of the chip, or if the chip is running in superuser mode.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L971).
----@param team number? # The number of the job (e.g. TEAM_MEDIC). Uses the player's team if nil.
----@return number? # The time left on the team ban in seconds, or nil if not banned.
-function Player:teamBanTimeLeft(team) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the voice volume of the player.
