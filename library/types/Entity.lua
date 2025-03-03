@@ -931,7 +931,7 @@ function Entity:getSubMaterial(index) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns a copy of the entity's sanitized internal glua table.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1107).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1156).
 ---@return table # The entity's table.
 function Entity:getTable() end
 
@@ -943,7 +943,7 @@ function Entity:getUp() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns a variable from the entity's internal glua table.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1115).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1164).
 ---@param key string # The variable's key.
 ---@return any # The variable.
 function Entity:getVar(key) end
@@ -1367,7 +1367,7 @@ function Entity:setLOD(lod) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the entity to be used as the light origin position for this entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1125).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1174).
 ---@param lightOrigin Entity? # The lighting entity or nil to reset.
 function Entity:setLightingOriginEntity(lightOrigin) end
 
@@ -1524,6 +1524,19 @@ function Entity:setSubMaterial(index, material) end
 ---@param attachmentID number? # Optional attachmentid the trail should attach to
 ---@param additive boolean? # If the trail's rendering is additive
 function Entity:setTrails(startSize, endSize, length, material, color, attachmentID, additive) end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
+--- Marks an entity as a trigger, setting callback functions to run whenever other objects enter or leave the bounds of the first entity.
+--- The entity will still invoke the callbacks even if not solid and no physical collision occurs, unlike Entity:addCollisionListener.
+--- Set both functiions to nil to unmark this entity as a trigger.
+--- https://developer.valvesoftware.com/wiki/Triggers.
+--- You can only use this function on these classes:.
+--- - starfall_prop.
+--- - starfall_processor.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1107).
+---@param func function|nil # The StartTouch callback function. Arguments: (Entity object), the object entering our entity's bounds.
+---@param func function|nil # The EndTouch callback function. Arguments: (Entity object), the object leaving our entity's bounds.
+function Entity:setTriggerListener(func, func) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets a prop_physics to be unbreakable.
