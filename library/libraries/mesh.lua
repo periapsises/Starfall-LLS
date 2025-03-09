@@ -7,7 +7,7 @@ mesh = {}
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Pushes the vertex data onto the render stack.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1118).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1120).
 function mesh.advanceVertex() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
@@ -132,16 +132,18 @@ function mesh.writePosition(position) end
 ---@param v2 Vector # Vertex2 position
 ---@param v3 Vector # Vertex3 position
 ---@param v4 Vector # Vertex4 position
-function mesh.writeQuad(v1, v2, v3, v4) end
+---@param col Color # The color for the vertices.
+function mesh.writeQuad(v1, v2, v3, v4, col) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Draws a quad using a position, normal and size.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1108).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1109).
 ---@param position Vector #
 ---@param normal Vector #
 ---@param w number #
 ---@param h number #
-function mesh.writeQuadEasy(position, normal, w, h) end
+---@param col Color # The color for the vertices.
+function mesh.writeQuadEasy(position, normal, w, h, col) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the vertex texture coordinates.
