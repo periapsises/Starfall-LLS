@@ -48,6 +48,11 @@ local function compileLibrary(name, contents)
 		end
 
 		WriteSource(file, contents.path)
+
+		if name == "string" then
+			file:write("---@class stringlib\n")
+		end
+
 		file:write(name .. " = {}\n\n")
 		tableHeader = name .. "."
 	end
