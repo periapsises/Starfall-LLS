@@ -22,20 +22,20 @@ function Wirelink:__newindex(k, v) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns the entity that the wirelink represents.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L785).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L787).
 ---@return Entity # Entity the wirelink represents
 function Wirelink:entity() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns what an input of the wirelink is wired to.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L841).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L843).
 ---@param name string # Name of the input
 ---@return Entity # The entity the wirelink is wired to
 function Wirelink:getWiredTo(name) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns the name of the output an input of the wirelink is wired to.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L853).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L855).
 ---@param name string # Name of the input of the wirelink.
 ---@return string # String name of the output that the input is wired to.
 function Wirelink:getWiredToName(name) end
@@ -56,7 +56,7 @@ function Wirelink:inputValue(name) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns a table of all of the wirelink's inputs.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L791).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L793).
 ---@return table # All of the wirelink's inputs
 function Wirelink:inputs() end
 
@@ -68,20 +68,20 @@ function Wirelink:isValid() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Checks if an input is wired.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L831).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L833).
 ---@param name string # Name of the input to check
 ---@return boolean # Whether it is wired
 function Wirelink:isWired(name) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns the type of output name, or nil if it doesn't exist.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L774).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L775).
 ---@param name string # Output name to search for
 ---@return string # Type of output
 function Wirelink:outputType(name) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns a table of all of the wirelink's outputs.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L811).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L813).
 ---@return table # All of the wirelink's outputs
 function Wirelink:outputs() end
