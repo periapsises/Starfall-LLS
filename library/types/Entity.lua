@@ -1305,8 +1305,8 @@ function Entity:setCustomPropForces(ang, lin, mode) end
 --- This gets overriden by Entity.setCustomPropForces and cannot be used together.
 --- See available parameters here: https://wiki.facepunch.com/gmod/PhysObj:ComputeShadowControl.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L345).
----@param table any # |false data Shadow physics data, excluding 'deltatime'. 'teleportdistance' higher than 0 requires 'entities.setPos'. Pass a falsy value to disable custom physics entirely
-function Entity:setCustomPropShadowForce(table) end
+---@param data table|boolean # Shadow physics data, excluding 'deltatime'. 'teleportdistance' higher than 0 requires 'entities.setPos'. Pass a falsy value to disable custom physics entirely
+function Entity:setCustomPropShadowForce(data) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets whether an entity's shadow should be drawn.
