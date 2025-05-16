@@ -14,32 +14,32 @@ function Entity:__tostring() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Applies a angular velocity to an object.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L409).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L397).
 ---@param angvel Vector # The local angvel vector to apply
 function Entity:addAngleVelocity(angvel) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Allows detecting collisions on an entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L538).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L526).
 ---@param func function # The callback function with argument, table collsiondata, http://wiki.facepunch.com/gmod/Structures/CollisionData
 ---@param name string? # Optional name to distinguish multiple collision listeners and remove them individually later. (default: "")
 function Entity:addCollisionListener(func, name) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Applies velocity to an object.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L616).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L604).
 ---@param vel Vector # The world velocity vector to apply
 function Entity:addVelocity(vel) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Applies angular force to the entity (This function is garbage, use applyTorque instead).
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L482).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L470).
 ---@param ang Angle # The force angle
 function Entity:applyAngForce(ang) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Applies damage to an entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L282).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L270).
 ---@param amt number # Damage amount
 ---@param attacker Entity? # Damage attacker. Defaults to chip owner
 ---@param inflictor Entity? # Damage inflictor
@@ -49,26 +49,26 @@ function Entity:applyDamage(amt, attacker, inflictor, dmgtype, pos) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Applies linear force to the entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L448).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L436).
 ---@param vec Vector # The force vector
 function Entity:applyForceCenter(vec) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Applies linear force to the entity with an offset.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L463).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L451).
 ---@param force Vector # The force vector in world coordinates
 ---@param position Vector # The force position in world coordinates
 function Entity:applyForceOffset(force, position) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Applies torque.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L522).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L510).
 ---@param torque Vector # The torque vector
 function Entity:applyTorque(torque) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Invokes the entity's breaking animation and removes it.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L639).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L627).
 function Entity:breakEnt() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
@@ -103,25 +103,25 @@ function Entity:emitSound(snd, soundLevel, pitchPercent, volume, channel) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the entity drag state.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L812).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L800).
 ---@param drag boolean # Should the entity have air resistance?
 function Entity:enableDrag(drag) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets entity gravity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L798).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L786).
 ---@param grav boolean # Should the entity respect gravity?
 function Entity:enableGravity(grav) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the entity movement state.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L840).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L828).
 ---@param move boolean # Should the entity move?
 function Entity:enableMotion(move) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the physics of an entity to be a sphere.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L869).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L857).
 ---@param enabled boolean # Should the entity be spherical?
 ---@param radius number? # Optional custom radius to use (max 500). Otherwise the prop's obb is used
 function Entity:enableSphere(enabled, radius) end
@@ -141,12 +141,12 @@ function Entity:entOwner() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Extinguishes an entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L668).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L656).
 function Entity:extinguish() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Gets a table of all constrained entities to each other.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L938).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L926).
 ---@param filter table? # Optional constraint type filter table where keys are the type name and values are 'true'. "Wire" and "Parent" are used for wires and parents.
 function Entity:getAllConstrained(filter) end
 
@@ -339,7 +339,7 @@ function Entity:getColor4Part() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns entity's creation ID (similar to entIndex, but increments monotonically).
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1074).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1062).
 ---@return number # The creation ID
 function Entity:getCreationID() end
 
@@ -465,7 +465,7 @@ function Entity:getForward() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns how much friction the entity has, default is 1 (100%).
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L424).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L412).
 ---@return number # friction
 function Entity:getFriction() end
 
@@ -726,7 +726,7 @@ function Entity:getPersistent() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Get the physical material of the entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L768).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L756).
 ---@return string # The physical material
 function Entity:getPhysMaterial() end
 
@@ -931,7 +931,7 @@ function Entity:getSubMaterial(index) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns a copy of the entity's sanitized internal glua table.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1159).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1147).
 ---@return table # The entity's table.
 function Entity:getTable() end
 
@@ -943,7 +943,7 @@ function Entity:getUp() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns a variable from the entity's internal glua table.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1167).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1155).
 ---@param key string # The variable's key.
 ---@return any # The variable.
 function Entity:getVar(key) end
@@ -980,14 +980,14 @@ function Entity:hasInstance() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Ignites an entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L650).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L638).
 ---@param length number # How long the fire lasts
 ---@param radius number? # (optional) How large the fire hitbox is (entity obb is the max)
 function Entity:ignite(length, radius) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns if the entity is a constraint.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L791).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L779).
 ---@return boolean # If the entity is a constraint
 function Entity:isConstraint() end
 
@@ -1008,7 +1008,7 @@ function Entity:isEffectActive(effect) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Checks the entities frozen state.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L860).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L848).
 ---@return boolean # True if entity is frozen
 function Entity:isFrozen() end
 
@@ -1044,7 +1044,7 @@ function Entity:isPlayer() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns true if the entity is being held by a player. Either by Physics gun, Gravity gun or Use-key.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L784).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L772).
 ---@return boolean # If the entity is being held or not
 function Entity:isPlayerHolding() end
 
@@ -1068,7 +1068,7 @@ function Entity:isValid() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Checks whether entity has physics.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L778).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L766).
 ---@return boolean # If entity has physics
 function Entity:isValidPhys() end
 
@@ -1086,13 +1086,13 @@ function Entity:isWeapon() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Gets what the entity is welded to. If the entity is parented, returns the parent.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L921).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L909).
 ---@return Entity # The first welded/parent entity
 function Entity:isWeldedTo() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Links starfall components to a starfall processor or vehicle. Screen can only connect to processor. HUD can connect to processor and vehicle.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L240).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L228).
 ---@param e Entity? # Entity to link the component to, a vehicle or starfall for huds, or a starfall for screens. nil to clear links.
 function Entity:linkComponent(e) end
 
@@ -1211,18 +1211,18 @@ function Entity:obbSize() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Removes an entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L631).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L619).
 function Entity:remove() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Removes a collision listener from the entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L551).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L539).
 ---@param name string? # The name of the collision listener to remove. (default: "")
 function Entity:removeCollisionListener(name) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Removes trails from the entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1026).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1014).
 function Entity:removeTrails() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
@@ -1234,13 +1234,13 @@ function Entity:sequenceDuration(id) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Set the angular velocity of an object.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L393).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L381).
 ---@param angvel Vector # The local angvel vector to set
 function Entity:setAngleVelocity(angvel) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the entity's angles.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L579).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L567).
 ---@param ang Angle # New angles
 function Entity:setAngles(ang) end
 
@@ -1260,7 +1260,7 @@ function Entity:setBoneMatrix(bone, matrix) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the entity's collision group.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L698).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L686).
 ---@param group number # The COLLISION_GROUP value to set it to
 function Entity:setCollisionGroup(group) end
 
@@ -1281,20 +1281,20 @@ function Entity:setColor4Part(r, g, b, a) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets a component's ability to lock a player's controls.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L269).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L257).
 ---@param enable boolean # Whether the component will lock the player's controls when used
 function Entity:setComponentLocksControls(enable) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the contents flag of the physobject.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L825).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L813).
 ---@param contents number # The CONTENTS enum
 function Entity:setContents(contents) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets a custom prop's physics simulation forces. Thrusters and balloons use this.
 --- This takes precedence over Entity.setCustomPropShadowForce and cannot be used together.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L316).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L304).
 ---@param ang Vector # Angular Force (Torque)
 ---@param lin Vector # Linear Force
 ---@param mode number # The physics mode to use. 0 = Off (disables custom physics entirely), 1 = Local acceleration, 2 = Local force, 3 = Global Acceleration, 4 = Global force
@@ -1304,19 +1304,19 @@ function Entity:setCustomPropForces(ang, lin, mode) end
 --- Sets a custom prop's shadow forces, moving the entity to the desired position and angles.
 --- This gets overriden by Entity.setCustomPropForces and cannot be used together.
 --- See available parameters here: https://wiki.facepunch.com/gmod/PhysObj:ComputeShadowControl.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L345).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L333).
 ---@param data table|boolean # Shadow physics data, excluding 'deltatime'. 'teleportdistance' higher than 0 requires 'entities.setPos'. Pass a falsy value to disable custom physics entirely
 function Entity:setCustomPropShadowForce(data) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets whether an entity's shadow should be drawn.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L562).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L550).
 ---@param draw boolean # Whether the shadow should draw
 function Entity:setDrawShadow(draw) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the elasticity of the entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L439).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L427).
 ---@param elasticity number #
 function Entity:setElasticity(elasticity) end
 
@@ -1335,13 +1335,13 @@ function Entity:setFlexWeight(flexid, weight) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the entity's friction multiplier.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L430).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L418).
 ---@param friction number #
 function Entity:setFriction(friction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the entity frozen state, same as `Entity.enableMotion` but inverted.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L854).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L842).
 ---@param freeze boolean # Should the entity be frozen?
 function Entity:setFrozen(freeze) end
 
@@ -1353,7 +1353,7 @@ function Entity:setHealth(newhealth) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the entity's inertia.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L736).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L724).
 ---@param vec Vector # Inertia tensor
 function Entity:setInertia(vec) end
 
@@ -1367,25 +1367,25 @@ function Entity:setLOD(lod) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the entity to be used as the light origin position for this entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1177).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1165).
 ---@param lightOrigin Entity? # The lighting entity or nil to reset.
 function Entity:setLightingOriginEntity(lightOrigin) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the entity's angles local to its parent.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L595).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L583).
 ---@param ang Angle # New angles
 function Entity:setLocalAngles(ang) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the entity's position local to its parent.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L587).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L575).
 ---@param vec Vector # New position
 function Entity:setLocalPos(vec) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the entity's mass.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L720).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L708).
 ---@param mass number # Mass to set to
 function Entity:setMass(mass) end
 
@@ -1421,7 +1421,7 @@ function Entity:setNoDraw(draw) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Set's the entity to collide with nothing but the world. Alias to entity:setCollisionGroup(COLLISION_GROUP_WORLD).
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L710).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L698).
 ---@param nocollide boolean # Whether to collide with nothing except world or not.
 function Entity:setNocollideAll(nocollide) end
 
@@ -1441,7 +1441,7 @@ function Entity:setPersistent(persist) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the physical material of the entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L754).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L742).
 ---@param materialName string # Material to use
 function Entity:setPhysMaterial(materialName) end
 
@@ -1451,13 +1451,13 @@ function Entity:setPhysMaterial(materialName) end
 --- You can only use this function on these classes:.
 --- - starfall_prop.
 --- - starfall_processor.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1085).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1073).
 ---@param func function|nil # The callback function. Use nil to remove an existing callback.
 function Entity:setPhysicsUpdateListener(func) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the entity's position. No interpolation will occur clientside, use physobj.setPos to have interpolation.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L571).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L559).
 ---@param vec Vector # New position
 function Entity:setPos(vec) end
 
@@ -1470,7 +1470,7 @@ function Entity:setPose(pose, value) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Prevents an entity from being transmitted to one or more clients. In order to work, this function has to also be called on all the entity's children if any.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1186).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1174).
 ---@param target Player|table # The player or table of players to target.
 ---@param prevent boolean # Whether the entity should be prevented from being transmitted.
 function Entity:setPreventTransmit(target, prevent) end
@@ -1509,7 +1509,7 @@ function Entity:setSkin(skinIndex) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the entity to be Solid or not.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L688).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L676).
 ---@param solid boolean # Should the entity be solid?
 function Entity:setSolid(solid) end
 
@@ -1522,7 +1522,7 @@ function Entity:setSubMaterial(index, material) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Adds a trail to the entity with the specified attributes.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L994).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L982).
 ---@param startSize number # The start size of the trail (0-128)
 ---@param endSize number # The end size of the trail (0-128)
 ---@param length number # The length size of the trail
@@ -1540,20 +1540,20 @@ function Entity:setTrails(startSize, endSize, length, material, color, attachmen
 --- You can only use this function on these classes:.
 --- - starfall_prop.
 --- - starfall_processor.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1110).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1098).
 ---@param func function|nil # The StartTouch callback function. Arguments: (Entity object), the object entering our entity's bounds.
 ---@param func function|nil # The EndTouch callback function. Arguments: (Entity object), the object leaving our entity's bounds.
 function Entity:setTriggerListener(func, func) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets a prop_physics to be unbreakable.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1034).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1022).
 ---@param on boolean # Whether to make the prop unbreakable
 function Entity:setUnbreakable(on) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the entity's linear velocity. Physics entities, use physobj:setVelocity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L603).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L591).
 ---@param vel Vector # New velocity
 function Entity:setVelocity(vel) end
 
@@ -1565,7 +1565,7 @@ function Entity:stopSound(snd) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Check if the given Entity or Vector is within this entity's PVS (Potentially Visible Set). See: https://developer.valvesoftware.com/wiki/PVS.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1056).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L1044).
 ---@param other Entity|Vector # Entity or Vector to test
 ---@return boolean # If the Entity/Vector is within the PVS
 function Entity:testPVS(other) end
@@ -1592,7 +1592,7 @@ function Entity:translatePhysBoneToBone(boneid) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Simulate a Use action on the entity by the chip owner.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L676).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L664).
 ---@param usetype number? # The USE_ enum use type. (Default: USE_ON)
 ---@param value number? # The use value (Default: 0)
 function Entity:use(usetype, value) end
