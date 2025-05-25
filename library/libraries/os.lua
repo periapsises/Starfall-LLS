@@ -30,6 +30,24 @@ function os.date(format, time) end
 function os.difftime(timeA, timeB) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- Returns true if the operating system Linux is running gmod.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L430).
+---@return boolean # If the os is Linux
+function os.isLinux() end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- Returns true if the operating system OSX is running gmod.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L435).
+---@return boolean # If the os is OSX
+function os.isOSX() end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- Returns true if the operating system Windows is running gmod.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L425).
+---@return boolean # If the os is Windows
+function os.isWindows() end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the system time in seconds past the unix epoch.
 --- If a table is supplied, the function attempts to build a system time with the specified table members.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L418).
