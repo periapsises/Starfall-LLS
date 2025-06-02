@@ -88,6 +88,7 @@
 ---| '"PostDrawSkyBox"' #  Called after the 3D skybox is drawn. This will not be called if PreDrawSkyBox has prevented rendering of the skybox
 ---| '"PostDrawTranslucentRenderables"' #  Called after translucent entities are drawn. (Only works with HUD) (3D context)
 ---| '"PostEntityFireBullets"' #  Called after a bullet is fired and it's trace has been calculated
+---| '"PostEntityTakeDamage"' #  Called when an entity is damaged, after EntityTakeDamage is processed.
 ---| '"PreDrawHUD"' #  Called before drawing HUD (2D Context)
 ---| '"PreDrawOpaqueRenderables"' #  Called before opaque entities are drawn. (Only works with HUD) (3D context)
 ---| '"PreDrawPlayer"' #  Called before drawing the player. (Only works with HUD) (3D Context)
@@ -212,6 +213,7 @@
 ---@alias PostDrawSkyBox fun()
 ---@alias PostDrawTranslucentRenderables fun(depth: boolean, skybox: boolean, skybox3d: boolean)
 ---@alias PostEntityFireBullets fun(ent: Entity, data: table)
+---@alias PostEntityTakeDamage fun(target: Entity, attacker: Entity, inflictor: Entity, amount: number, type: number, position: Vector, force: Vector, took: boolean)
 ---@alias PreDrawHUD fun()
 ---@alias PreDrawOpaqueRenderables fun(depth: boolean, skybox: boolean, skybox3d: boolean) : boolean
 ---@alias PreDrawPlayer fun(ply: Player, flags: number) : boolean

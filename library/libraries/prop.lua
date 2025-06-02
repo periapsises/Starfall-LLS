@@ -81,6 +81,18 @@ function prop.createSeat(pos, ang, model, frozen) end
 function prop.createSent(pos, ang, class, frozen, data) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
+--- Returns whether the chip will automatically remove created props when the chip is removed.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L702).
+---@return boolean # Determines whether props will be cleaned
+function prop.getPropClean() end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
+--- Returns whether the props are undo-able.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L709).
+---@return boolean # Determines whether props are undo-able
+function prop.getPropUndo() end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Get a list of all spawnable sents.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L324).
 ---@param categorized boolean? # True to get an categorized list
@@ -107,13 +119,13 @@ function prop.propsLeft() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets whether the chip should remove created props when the chip is removed.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L702).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L716).
 ---@param on boolean # Whether the props should be cleaned or not
 function prop.setPropClean(on) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets whether the props should be undo-able.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L708).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L724).
 ---@param on boolean # Whether the props should be undo-able
 function prop.setPropUndo(on) end
 
