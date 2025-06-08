@@ -783,7 +783,7 @@ function render.getViewSetup(curview) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Checks if the client is connected to a HUD component that's linked to this chip.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2397).
----@return boolean # True if a HUD component is connected and active, nil otherwise
+---@return boolean # If a HUD component is connected and active
 function render.isHUDActive() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)

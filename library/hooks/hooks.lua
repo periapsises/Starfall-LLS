@@ -2,6 +2,7 @@
 
 ---@alias HookName
 ---| '"AddLaw"' #  Called when a law is added. DarkRP only.
+---| '"AdjustMouseSensitivity"' #  Allows modifying the player's mouse sensitivity
 ---| '"CalcView"' #  Called when the engine wants to calculate the player's view. Only works if connected to Starfall HUD
 ---| '"ChatTextChanged"' #  Called when the player's chat box text changes.  Requires the 'input' permission.
 ---| '"ClientInitialized"' #  Called after a client's starfall has initialized. Use this to know when it's safe to send net messages to the client.
@@ -127,6 +128,7 @@
 ---| string # A custom hook name called when triggered by hook.run
 
 ---@alias AddLaw fun(index: number, law: string, player: Player?)
+---@alias AdjustMouseSensitivity fun(defaultSensitivity: number, localFOV: number, defaultFOV: number) : number?
 ---@alias CalcView fun(pos: Vector, ang: Angle, fov: number, znear: number, zfar: number) : table
 ---@alias ChatTextChanged fun(txt: string)
 ---@alias ClientInitialized fun(ply: Player)
