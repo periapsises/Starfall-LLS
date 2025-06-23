@@ -2,23 +2,23 @@
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Mesh library.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L672).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L673).
 mesh = {}
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Pushes the vertex data onto the render stack.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1120).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1121).
 function mesh.advanceVertex() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Creates a mesh without any vertex data.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L916).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L917).
 ---@return Mesh # Mesh object
 function mesh.createEmpty() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Creates a mesh from an obj file. Only supports triangular meshes with normals and texture coordinates.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L887).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L888).
 ---@param obj string # The obj file data
 ---@param threaded boolean? # Optional bool, use threading object that can be used to load the mesh over time to prevent hitting quota limit
 ---@param triangulate boolean? # Whether to triangulate faces. (Consumes more CPU)
@@ -27,7 +27,7 @@ function mesh.createFromObj(obj, threaded, triangulate) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Creates a mesh from vertex data.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L846).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L847).
 ---@param vertices table # Table containing vertex data. http://wiki.facepunch.com/gmod/Structures/MeshVertex
 ---@param threaded boolean? # Optional bool, use threading object that can be used to load the mesh over time to prevent hitting quota limit. The thread will yield with number of vertices remaining to be processed. After 0 is yielded, the final expensive phase starts.
 ---@return Mesh # Mesh object
@@ -35,7 +35,7 @@ function mesh.createFromTable(vertices, threaded) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Finds the convex hull of provided vertices table.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L757).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L758).
 ---@param vertices table # The table of vertices (vectors) or vertex data (http://wiki.facepunch.com/gmod/Structures/MeshVertex)
 ---@param threaded boolean? # Optional bool, use threading object that can be used to run algorithm over time to prevent hitting quota limit
 ---@return table # The mesh table which can be passed to mesh.createFromTable
@@ -44,7 +44,7 @@ function mesh.findConvexHull(vertices, threaded) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Generates mesh data. If an Mesh object is passed, it will populate that mesh with the data. Otherwise, it will render directly to renderer.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1005).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1006).
 ---@param mesh_obj Mesh? # Optional Mesh object, mesh to build. (default: nil)
 ---@param prim_type number # Int, primitive type, see MATERIAL
 ---@param prim_count number # Int, the amount of primitives
@@ -53,7 +53,7 @@ function mesh.generate(mesh_obj, prim_type, prim_count, func) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Generates normal vectors for the provided vertices table.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L721).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L722).
 ---@param vertices table # The table of vertices
 ---@param inverted boolean? # Optional bool, invert the normal
 ---@param smooth_limit number? # Optional number, smooths the normal based on the limit in radians
@@ -61,20 +61,20 @@ function mesh.generateNormals(vertices, inverted, smooth_limit) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Generates the tangents for the provided vertices table.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L747).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L748).
 ---@param vertices table # The table of vertices
 function mesh.generateTangents(vertices) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Generates the uv for the provided vertices table.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L735).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L736).
 ---@param vertices table # The table of vertices
 ---@param scale number # The scale of the uvs
 function mesh.generateUV(vertices, scale) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns a table of visual meshes of given model or nil if the model is invalid.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L943).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L944).
 ---@param model string # The full path to a model to get the visual meshes of.
 ---@param lod number? # The lod of the model to use. Default 0.
 ---@param bodygroupMask number? # The bodygroupMask of the model to use. Default 0.
@@ -84,7 +84,7 @@ function mesh.getModelMeshes(model, lod, bodygroupMask) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Parses obj data into a table of vertices, normals, texture coordinates, colors, and tangents.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L707).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L708).
 ---@param obj string # The obj data
 ---@param threaded boolean? # Optional bool, use threading object that can be used to load the mesh over time to prevent hitting quota limit
 ---@param triangulate boolean? # Whether to triangulate the faces
@@ -94,19 +94,19 @@ function mesh.parseObj(obj, threaded, triangulate) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns how many triangles can be created.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L979).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L980).
 ---@return number # Number of triangles that can be created
 function mesh.trianglesLeft() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns how many triangles can be rendered.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L986).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L987).
 ---@return number # Number of triangles that can be rendered
 function mesh.trianglesLeftRender() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the vertex color by RGBA values.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1055).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1056).
 ---@param r number # Number, red value
 ---@param g number # Number, green value
 ---@param b number # Number, blue value
@@ -115,19 +115,19 @@ function mesh.writeColor(r, g, b, a) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the vertex normal.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1065).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1066).
 ---@param normal Vector # Normal
 function mesh.writeNormal(normal) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the vertex position.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1072).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1073).
 ---@param position Vector # Position
 function mesh.writePosition(position) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Draws a quad using 4 vertices.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1098).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1099).
 ---@param v1 Vector # Vertex1 position
 ---@param v2 Vector # Vertex2 position
 ---@param v3 Vector # Vertex3 position
@@ -137,7 +137,7 @@ function mesh.writeQuad(v1, v2, v3, v4, col) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Draws a quad using a position, normal and size.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1109).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1110).
 ---@param position Vector #
 ---@param normal Vector #
 ---@param w number #
@@ -147,7 +147,7 @@ function mesh.writeQuadEasy(position, normal, w, h, col) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the vertex texture coordinates.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1079).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1080).
 ---@param stage number # Stage of the texture coordinate
 ---@param u number # U coordinate
 ---@param v number # V coordinate
@@ -155,7 +155,7 @@ function mesh.writeUV(stage, u, v) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the vertex tangent user data.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1088).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1089).
 ---@param x number # x
 ---@param y number # y
 ---@param z number # z
