@@ -163,7 +163,7 @@ function game.isSkyboxVisibleFromPoint(position) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns if the client is currently timing out from the server.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L282).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L289).
 ---@return boolean # If currently timing out
 ---@return number # Time since the connection started to timeout
 function game.isTimingOut() end
@@ -174,6 +174,18 @@ function game.isTimingOut() end
 ---@param path string # Filepath in game folder
 ---@return boolean? # True if exists, false if not, nil if error
 function game.modelExists(path) end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- Returns the frame time of the physics engine.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L299).
+---@return number # The physics frame time length
+function game.physicsFrameTime() end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
+--- Returns the real frame-time which is unaffected by host_timescale.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L282).
+---@return number # Frametime
+function game.realFrameTime() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the server's frame time and standard deviation.
