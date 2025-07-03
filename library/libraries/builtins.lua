@@ -1241,7 +1241,7 @@ function require(path, ...) end
 --- The path must be an actual path, including the file extension and using slashes for directory separators instead of periods.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L824).
 ---@param path string # The directory to include. Make sure to --@includedir it
----@param loadpriority table # Table of files that should be loaded before any others in the directory
+---@param loadpriority table? # Table of files that should be loaded before any others in the directory
 ---@return table # Table of return values of the scripts
 function requiredir(path, loadpriority) end
 

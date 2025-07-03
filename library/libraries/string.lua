@@ -10,8 +10,8 @@ string = {}
 --- Returns the given string's characters in their numeric ASCII representation.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L33).
 ---@param str string # The string to get the chars from
----@param start number # The first character of the string to get the byte of
----@param _end number # The last character of the string to get the byte of
+---@param start number? # The first character of the string to get the byte of. Defaults to 1
+---@param _end number? # The last character of the string to get the byte of. Defaults to 'start'
 ---@return ... # Vararg numerical bytes
 function string.byte(str, start, _end) end
 
@@ -66,7 +66,7 @@ function string.explode(separator, str, patterns) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L75).
 ---@param haystack string # The string to search in
 ---@param needle string # The string to find, can contain patterns if enabled
----@param start number # The position to start the search from, negative start position will be relative to the end position
+---@param start number? # The position to start the search from, negative start position will be relative to the end position
 ---@param noPatterns boolean? # Disable patterns. Defaults to false
 ---@return number? # Starting position of the found text, or nil if the text wasn't found
 ---@return number? # Ending position of found text, or nil if the text wasn't found

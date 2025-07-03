@@ -69,7 +69,7 @@ function math.atan2(y, x) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Calculates B-Spline point.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L330).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L331).
 ---@param tDiff number # From 0 to tMax, where alongside the spline the point will be
 ---@param tPoints number # A table of Vectors. The amount cannot be less than 4
 ---@param tMax number # Dictates maximum value for tDiff
@@ -78,7 +78,7 @@ function math.bSplinePoint(tDiff, tPoints, tMax) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns a point along a bezier curve.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L387).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L388).
 ---@param ratio number # Number representing how far along the curve, 0-1.
 ---@param start Vector # The start position of the curve.
 ---@param middle Vector # The middle position of the curve.
@@ -88,7 +88,7 @@ function math.bezierVector(ratio, start, middle, _end) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns a point along a cubic bezier curve.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L405).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L406).
 ---@param ratio number # Number representing how far along the curve, 0-1.
 ---@param start Vector # The start position of the curve.
 ---@param tangent1 Vector # First tangent
@@ -163,7 +163,7 @@ function math.distance(x1, y1, x2, y2) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the distance between a line and a point in 3d space.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L375).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L376).
 ---@param lineStart Vector # Start of the line
 ---@param lineEnd Vector # End of the line
 ---@param pointPos Vector # Position of the point
@@ -174,42 +174,42 @@ function math.distanceToLine(lineStart, lineEnd, pointPos) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases in by reversing the direction of the ease slightly before returning.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L441).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L442).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeInBack(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases in like a bouncy ball.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L447).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L448).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeInBounce(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases in using a circular function.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L453).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L454).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeInCirc(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases in by cubing the fraction.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L459).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L460).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeInCubic(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases in like a rubber band.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L465).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L466).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeInElastic(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases in using an exponential equation with a base of 2 and where the fraction is used in the exponent.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L471).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L472).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeInExpo(fraction) end
@@ -225,154 +225,154 @@ function math.easeInOut(progress, easeIn, easeOut) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases in and out by reversing the direction of the ease slightly before returning on both ends.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L477).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L478).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeInOutBack(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases in and out like a bouncy ball.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L483).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L484).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeInOutBounce(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases in and out using a circular function.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L489).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L490).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeInOutCirc(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases in and out by cubing the fraction.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L495).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L496).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeInOutCubic(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases in and out like a rubber band.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L501).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L502).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeInOutElastic(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases in and out using an exponential equation with a base of 2 and where the fraction is used in the exponent.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L507).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L508).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeInOutExpo(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases in and out by squaring the fraction.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L513).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L514).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeInOutQuad(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases in and out by raising the fraction to the power of 4.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L519).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L520).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeInOutQuart(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases in and out by raising the fraction to the power of 5.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L525).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L526).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeInOutQuint(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases in and out using math.sin.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L531).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L532).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeInOutSine(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases in by squaring the fraction.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L537).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L538).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeInQuad(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases in by raising the fraction to the power of 4.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L543).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L544).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeInQuart(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases in by raising the fraction to the power of 5.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L549).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L550).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeInQuint(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases in using math.sin.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L555).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L556).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeInSine(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases out by reversing the direction of the ease slightly before finishing.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L561).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L562).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeOutBack(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases out like a bouncy ball.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L567).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L568).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeOutBounce(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases out using a circular function.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L573).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L574).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeOutCirc(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases out by cubing the fraction.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L579).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L580).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeOutCubic(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases out like a rubber band.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L585).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L586).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeOutElastic(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases out by raising the fraction to the power of 4.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L591).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L592).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeOutQuart(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases out by raising the fraction to the power of 5.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L597).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L598).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeOutQuint(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Eases out using math.sin.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L603).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L604).
 ---@param fraction number # Fraction of the progress to ease, from 0 to 1
 ---@return number # "Eased" Value
 function math.easeOutSine(fraction) end
@@ -431,7 +431,7 @@ function math.ldexp(normalizedFraction, exponent) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Performs a linear interpolation from the start number to the end number.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L340).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L341).
 ---@param t number # The fraction for finding the result. This number is clamped between 0 and 1
 ---@param from number # The starting number. The result will be equal to this if value t is 0
 ---@param to number # The ending number. The result will be equal to this if value t is 1
@@ -440,7 +440,7 @@ function math.lerp(t, from, to) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Calculates point between first and second angle using given fraction and linear interpolation.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L353).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L354).
 ---@param ratio number # Ratio of progress through values
 ---@param from Angle # Angle to begin from
 ---@param to Angle # Angle to end at
@@ -449,7 +449,7 @@ function math.lerpAngle(ratio, from, to) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Calculates point between first and second vector using given fraction and linear interpolation.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L364).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L365).
 ---@param ratio number # Ratio of progress through values
 ---@param from Vector # Vector to begin from
 ---@param Vector Vector # to end at
@@ -559,11 +559,12 @@ function math.remap(value, inMin, inMax, outMin, outMax) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L279).
 ---@param value number # The number to be rounded
 ---@param decimals number? # Optional decimal places to round to. Defaults to 0
+---@return number # The rounded value
 function math.round(value, decimals) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Generates a random float value that should be the same on client and server.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L429).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L430).
 ---@param uniqueName string # The seed for the random value
 ---@param Min number # The minimum value of the random range
 ---@param Max number # The maximum value of the random range
@@ -580,14 +581,14 @@ function math.sign(x) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Calculates the sine of given angle.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L285).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L286).
 ---@param ang number # Angle in radians
 ---@return number # Sine for given angle
 function math.sin(ang) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Calculates the hyperbolic sine of the given angle.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L291).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L292).
 ---@param ang number # Angle in radians
 ---@return number # The hyperbolic sine of the given angle
 function math.sinh(ang) end
@@ -603,28 +604,28 @@ function math.slerpQuaternion(quat1, quat2, t) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Calculates square root of the number.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L297).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L298).
 ---@param value number # The value to get the square root of
 ---@return number # Square root of the provided value
 function math.sqrt(value) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Calculates the tangent of the given angle.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L303).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L304).
 ---@param ang number # Angle in radians
 ---@return number # The tangent of the given angle
 function math.tan(ang) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Calculates hyperbolic tangent of the given angle.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L309).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L310).
 ---@param ang number # Angle in radians
 ---@return number # The hyperbolic tangent of the given angle
 function math.tanh(ang) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Calculates the fraction of where the current time is relative to the start and end times.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L315).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L316).
 ---@param start number # Start time in seconds
 ---@param _end number # End time in seconds
 ---@param current number # Current time in seconds
@@ -633,7 +634,7 @@ function math.timeFraction(start, _end, current) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Rounds towards zero.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L323).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L324).
 ---@param val number # The number to truncate
 ---@param digits number? # The amount of digits to keep after the point. Default 0
 ---@return number # Rounded number

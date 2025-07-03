@@ -194,8 +194,8 @@ function render.createRenderTarget(name) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2247).
 ---@param ply Player? # player to get cursor position from. Default player()
 ---@param screen Entity? # An explicit screen to get the cursor pos of (default: The current rendering screen using 'render' hook)
----@return number # X position
----@return number # Y position
+---@return number? # X position or nil if the player is not aiming at the screen
+---@return number? # Y position or nil if the player is not aiming at the screen
 function render.cursorPos(ply, screen) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)

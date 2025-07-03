@@ -39,7 +39,7 @@ function table.collapseKeyValue(tbl) end
 --- Concatenates the contents of a table to a string.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/table.lua#L42).
 ---@param tbl table # The table to concatenate
----@param concatenator string # A seperator to insert between each string
+---@param concatenator string? # A seperator to insert between each string. Defaults to ""
 ---@param startPos number? # Optional key to start at. Defaults to 1
 ---@param endPos number? # Optional key to end at. Defaults to #tbl
 ---@return string # Concatenated string

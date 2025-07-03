@@ -1,6 +1,7 @@
 ---@meta
 
 ---@alias HookName
+---| string # A custom hook name called when triggered by hook.run
 ---| '"AddLaw"' #  Called when a law is added. DarkRP only.
 ---| '"AdjustMouseSensitivity"' #  Allows modifying the player's mouse sensitivity
 ---| '"CalcView"' #  Called when the engine wants to calculate the player's view. Only works if connected to Starfall HUD
@@ -125,7 +126,6 @@
 ---| '"XInputReleased"' #  Called when a controller button has been released. Client must have XInput Lua binary installed.
 ---| '"XInputStick"' #  Called when a stick on the controller has moved. Client must have XInput Lua binary installed.
 ---| '"XInputTrigger"' #  Called when a trigger on the controller has moved. Client must have XInput Lua binary installed.
----| string # A custom hook name called when triggered by hook.run
 
 ---@alias AddLaw fun(index: number, law: string, player: Player?)
 ---@alias AdjustMouseSensitivity fun(defaultSensitivity: number, localFOV: number, defaultFOV: number) : number?

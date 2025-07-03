@@ -16,7 +16,7 @@ function os.clock() end
 --- Returns the date/time as a formatted string or in a table.
 --- See https://wiki.facepunch.com/gmod/Structures/DateData for the table structure.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L403).
----@param format string # The format string. If starts with an '!', it will use UTC timezone rather than the local timezone
+---@param format string? # The format string. If starts with an '!', it will use UTC timezone rather than the local timezone
 ---@param time number? # Time to use for the format. Default os.time()
 ---@return string|table # If format is equal to '*t' or '!*t' then it will return a table with DateData structure, otherwise a string
 function os.date(format, time) end

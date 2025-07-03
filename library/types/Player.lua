@@ -651,7 +651,7 @@ function Player:setUnDuckSpeed(newunduckspeed) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the view entity of the player. Only works if they are linked to a hud.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L166).
----@param ent Entity # Entity to set the player's view entity to, or nothing to reset it
+---@param ent Entity? # Entity to set the player's view entity to, or nothing to reset it
 function Player:setViewEntity(ent) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)

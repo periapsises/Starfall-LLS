@@ -95,10 +95,10 @@ function Entity:draw() end
 --- Plays a sound on the entity.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L267).
 ---@param snd string # Sound path
----@param soundLevel number # Default 75
----@param pitchPercent number # Default 100
----@param volume number # Default 1
----@param channel number # Default CHAN_AUTO or CHAN_WEAPON for weapons
+---@param soundLevel number? # Default 75
+---@param pitchPercent number? # Default 100
+---@param volume number? # Default 1
+---@param channel number? # Default CHAN_AUTO or CHAN_WEAPON for weapons
 function Entity:emitSound(snd, soundLevel, pitchPercent, volume, channel) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)

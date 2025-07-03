@@ -134,6 +134,6 @@ function find.playersByName(name, casesensitive, exact) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/find.lua#L209).
 ---@param ents table # The array of entities
 ---@param pos Vector # The position
----@param furthest boolean # Whether to have the further entities first
+---@param furthest boolean? # Whether to have the further entities first
 ---@return table # A table of the closest entities
 function find.sortByClosest(ents, pos, furthest) end
