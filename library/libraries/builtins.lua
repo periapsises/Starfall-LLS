@@ -835,7 +835,7 @@ function WebSocket(domain, port, secure, path) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- If the result of the first argument is false or nil, an error is thrown with the second argument as the message.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1169).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1174).
 ---@param expression any # Anything that will be evaluated to be true or false
 ---@param msg string? # Error message. Default "assertion failed!"
 ---@param ... any # Any arguments to return if the assertion is successful
@@ -849,51 +849,51 @@ function chip() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Creates a 'middleclass' class object that can be used similarly to Java/C++ classes. See https://github.com/kikito/middleclass for examples.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1271).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1276).
 ---@param name string # The string name of the class
 ---@param super table? # The (optional) parent class to inherit from
 function class(name, super) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Execute a console command.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L611).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L616).
 ---@param cmd string # Command to execute
 function concmd(cmd) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Checks how many concmds are remaining in the serverside burst limit.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L622).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L627).
 ---@return number # Number of concmds able to be ran serverside
 function concmdLeft() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns how many concmds per second the user can run serverside.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L630).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L635).
 ---@return number # Number of concmds per second the user can run serverside
 function concmdRate() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the Average CPU Time in the buffer.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L245).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L250).
 ---@return number # Average CPU Time of the buffer.
 function cpuAverage() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the CPU Time max.
 --- CPU Time is stored in a buffer of N elements, if the average of this exceeds cpuMax, the chip will error.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L299).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L304).
 ---@return number # Max SysTime allowed to take for execution of the chip in a Think.
 function cpuMax() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the total average time for all chips by the player.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L289).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L294).
 ---@return number # Total average CPU Time of all your chips.
 function cpuTotalAverage() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the total used time for all chips by the player.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L279).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L284).
 ---@return number # Total used CPU time of all your chips.
 function cpuTotalUsed() end
 
@@ -901,7 +901,7 @@ function cpuTotalUsed() end
 --- Returns the current count for this Think's CPU Time.
 --- This value increases as more executions are done, may not be exactly as you want.
 --- If used on screens, will show 0 if only rendering is done. Operations must be done in the Think loop for them to be counted.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L237).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L242).
 ---@return number # Current cpu time used this Think
 function cpuUsed() end
 
@@ -914,7 +914,7 @@ function crc(stringToHash) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Runs all included scripts in directory, but does not cache the result.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L875).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L880).
 ---@param path string # The directory to include. Make sure to --@includedir it
 ---@param loadpriority table # Table of files that should be loaded before any others in the directory
 ---@return table # Table of return values of the scripts
@@ -923,7 +923,7 @@ function dodir(path, loadpriority) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Runs an included script, but does not cache the result.
 --- Pretty much like standard Lua dofile().
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L861).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L866).
 ---@param path string # The file path to include. Make sure to --@include it
 ---@param ... any # Optional arguments to provide to the script (access them using vararg ...)
 ---@return ... # Return value(s) of the script
@@ -932,7 +932,7 @@ function dofile(path, ...) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Sets the current instance to allow HUD drawing. Only works if player is in your vehicle or.
 --- if it's ran on yourself or if the player is connected to your hud and you want to disconnect them.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1227).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1232).
 ---@param ply Player # The player to enable the hud on. If CLIENT, will be forced to player()
 ---@param active boolean # Whether hud hooks should be active. true to force on, false to force off.
 function enableHud(ply, active) end
@@ -946,45 +946,45 @@ function entity(num) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Throws an error. Similar to 'throw' but throws whatever you want instead of an SF Error.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1160).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1165).
 ---@param msg string # Message string
 ---@param level number? # Which level in the stacktrace to blame. Defaults to 1. 0 for no stacktrace.
 function error(msg, level) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the local player's camera angles.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L741).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L746).
 ---@return Angle # The local player's camera angles
 function eyeAngles() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the local player's camera position.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L748).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L753).
 ---@return Vector # The local player's camera position
 function eyePos() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the local player's camera forward vector.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L755).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L760).
 ---@return Vector # The local player's camera forward vector
 function eyeVector() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets all libraries.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L443).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L448).
 ---@return table # Table where each key is the library name and value is table of the library
 function getLibraries() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets an SF type's methods table.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L994).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L999).
 ---@param sfType string # Name of SF type
 ---@return table # Table of the type's methods which can be edited or iterated
 function getMethods(sfType) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the source code of and compiled function for specified script.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L763).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L768).
 ---@param path string # Path of file. Can be absolute or relative to calling file. Must be '--@include'-ed.
 ---@return string? # Source code, or nil if could not be found
 ---@return function? # Compiled function, or nil if could not be found
@@ -992,7 +992,7 @@ function getScript(path) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the source code of and compiled functions for the scripts used by the chip.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L774).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L779).
 ---@param ent Entity? # Optional target entity. Default: chip()
 ---@return table # Table where keys are paths and values are strings
 ---@return table? # Table where keys are paths and values are functions, or nil if another chip was specified
@@ -1000,7 +1000,7 @@ function getScripts(ent) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Gets the chip's userdata that the duplicator tool loads.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L649).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L654).
 ---@return string # String data
 function getUserdata() end
 
@@ -1008,7 +1008,7 @@ function getUserdata() end
 --- Lua's getfenv.
 --- Returns the environment of either the stack level or the function specified.
 --- Note that this function will return nil if the return value would be anything other than builtins_library or an environment you have passed to setfenv.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L975).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L980).
 ---@param funcOrStackLevel function|number # Function or stack level to get the environment of
 ---@return table? # Environment table (or nil, if restricted)
 function getfenv(funcOrStackLevel) end
@@ -1024,7 +1024,7 @@ function getmetatable(tbl) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Checks if the chip is capable of performing an action.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L313).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L318).
 ---@param perm string # The permission id to check
 ---@param obj any # Optional object to pass to the permission system.
 ---@return boolean # Whether the client has granted the specified permission.
@@ -1033,13 +1033,13 @@ function hasPermission(perm, obj) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns if this is the first time this hook was predicted.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L231).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L236).
 ---@return boolean # Whether this is the first time this hook was predicted
 function isFirstTimePredicted() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns if the table has an isValid function and isValid returns true.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1177).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1182).
 ---@param object any # Table to check
 ---@return boolean # If it is valid
 function isValid(object) end
@@ -1082,7 +1082,7 @@ function istable(x) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Like Lua 5.2 or LuaJIT's load/loadstring, except it has no mode parameter and, of course, the resulting function is in your instance's environment by default.
 --- For compatibility with older versions of Starfall, loadstring is NOT an alias of this function like it is in vanilla Lua 5.2/LuaJIT.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L922).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L927).
 ---@param code string # String to compile
 ---@param identifier string? # Name of compiled function
 ---@param env table? # Environment of compiled function
@@ -1092,7 +1092,7 @@ function loadstring(code, identifier, env) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Translates the specified position and angle from the specified local coordinate system.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1208).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1213).
 ---@param localPos Vector # The position vector that should be translated to world coordinates
 ---@param localAng Angle # The angle that should be converted to a world angle
 ---@param originPos Vector # The origin point of the source coordinate system, in world coordinates
@@ -1128,7 +1128,7 @@ function pairs(tbl) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Lua's pcall with SF throw implementation.
 --- Calls a function and catches an error that can be thrown while the execution of the call.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1074).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1079).
 ---@param func function # Function to be executed and of which the errors should be caught of
 ---@param ... any # Arguments to call the function with.
 ---@return boolean # If the function had no errors occur within it.
@@ -1137,7 +1137,7 @@ function pcall(func, ...) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Is permission request fully satisfied.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L364).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L369).
 ---@return boolean # Whether the client gave all permissions specified in last request or not.
 function permissionRequestSatisfied() end
 
@@ -1150,70 +1150,70 @@ function player(num) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Prints a message to the player's chat.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L547).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L552).
 ---@param ... any # Values to print. Colors before text will set the text color
 function print(...) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Prints a message to the player's console.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L560).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L565).
 ---@param ... any # Values to print. Colors before text will set the text color
 function printConsole(...) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Prints a message to a target player's chat as long as they're connected to a hud.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L569).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L574).
 ---@param ply Player # The target player. If in CLIENT, then ply is the client player and this param is omitted
 ---@param ... any # Values to print. Colors before text will set the text color
 function printHud(ply, ...) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Prints a message to your chat, console, or the center of your screen.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L687).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L692).
 ---@param mtype number # How the message should be displayed. See http://wiki.facepunch.com/gmod/Enums/HUD
 ---@param text string # The message text.
 function printMessage(mtype, text) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns the refill rate of the serverside print burst limit.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L604).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L609).
 ---@return number # Number of bytes per second the print burst limit refills
 function printRate() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Checks how much of the serverside print burst limit is remaining.
 --- The cost of each print is roughly equivalent to totalStringLength + 6*numColors + 2*numStrings.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L596).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L601).
 ---@return number # Size of the remaining print burst in bytes
 function printSizeLeft() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Prints a table to player's chat.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L589).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L594).
 ---@param tbl table # Table to print
 function printTable(tbl) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the moving average of ram usage of the gmod lua environment.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L257).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L262).
 ---@return number # The ram used in kilobytes
 function ramAverage() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the max allowed ram usage of the gmod lua environment.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L263).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L268).
 ---@return number # The max ram usage in kilobytes
 function ramMax() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the current ram usage of the gmod lua environment.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L251).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L256).
 ---@return number # The ram used in kilobytes
 function ramUsed() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the value of a table index without invoking a metamethod.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L458).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L463).
 ---@param table table # The table to get the value from
 ---@param key any # The index of the table
 ---@return any # The value of the index
@@ -1221,7 +1221,7 @@ function rawget(table, key) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Set the value of a table index without invoking a metamethod.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L449).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L454).
 ---@param tbl table # The table to modify
 ---@param key any # The index of the table
 ---@param value any # The value to set the index equal to
@@ -1230,7 +1230,7 @@ function rawset(tbl, key, value) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Runs an included script and caches the result.
 --- The path must be an actual path, including the file extension and using slashes for directory separators instead of periods.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L805).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L810).
 ---@param path string # The file path to include. Make sure to --@include it
 ---@param ... any # Optional arguments to provide to the script (access them using vararg ...)
 ---@return any # Return value of the script
@@ -1239,7 +1239,7 @@ function require(path, ...) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Runs all included scripts in a directory and caches the results.
 --- The path must be an actual path, including the file extension and using slashes for directory separators instead of periods.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L819).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L824).
 ---@param path string # The directory to include. Make sure to --@includedir it
 ---@param loadpriority table # Table of files that should be loaded before any others in the directory
 ---@return table # Table of return values of the scripts
@@ -1248,7 +1248,7 @@ function requiredir(path, loadpriority) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Restarts a chip owned by yourself.
 --- Only restarts the realm that this gets called in.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1247).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1252).
 ---@param chip Entity? # The chip to restart. If nil, it will restart the current chip.
 function restart(chip) end
 
@@ -1262,36 +1262,36 @@ function select(parameter, ...) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Opens the permission request dialogue if the player is connected to HUD. setupPermissionRequest must be called first.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L372).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L377).
 function sendPermissionRequest() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the chip's display author.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L667).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L672).
 ---@param author string # Author to set the chip's author to
 function setAuthor(author) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets clipboard text. Only works on the owner of the chip.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L678).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L683).
 ---@param txt string # Text to set to the clipboard
 function setClipboardText(txt) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the chip's display name.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L656).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L661).
 ---@param name string # Name to set the chip's name to
 function setName(name) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Sets a soft cpu quota which will trigger a catchable error if the cpu goes over a certain amount.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L306).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L311).
 ---@param quota number # The threshold where the soft error will be thrown. Ratio of current cpu to the max cpu usage. 0.5 is 50%
 function setSoftQuota(quota) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the chip's userdata that the duplicator tool saves. max 1MiB; can be changed with convar sf_userdata_max.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L637).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L642).
 ---@param str string # String data
 function setUserdata(str) end
 
@@ -1299,7 +1299,7 @@ function setUserdata(str) end
 --- Lua's setfenv.
 --- Sets the environment of either the stack level or the function specified.
 --- Note that this function will throw an error if you try to use it on anything outside of your sandbox.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L954).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L959).
 ---@param funcOrStackLevel function|number # Function or stack level to set the environment of
 ---@param tbl table # New environment
 ---@return function # Function with environment set to tbl
@@ -1315,7 +1315,7 @@ function setmetatable(tbl, meta) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Setups request for overriding permissions.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L331).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L336).
 ---@param perms table # Table of overridable permissions' names.
 ---@param desc string # Description attached to request.
 ---@param showOnUse boolean # Whether request will popup when player uses chip or linked screen.
@@ -1323,13 +1323,13 @@ function setupPermissionRequest(perms, desc, showOnUse) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Sets the chip to allow other chips to view its sources.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L798).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L803).
 ---@param enable boolean # If true, allow sharing scripts
 function shareScripts(enable) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Throws an exception.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1152).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1157).
 ---@param msg string # Message string
 ---@param level number? # Which level in the stacktrace to blame. Defaults to 1
 ---@param uncatchable boolean? # Makes this exception uncatchable
@@ -1352,7 +1352,7 @@ function tostring(obj) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Try to execute a function and catch possible exceptions.
 --- Similar to xpcall, but a bit more in-depth.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1131).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1136).
 ---@param func function # Function to execute
 ---@param catch function? # Optional function to execute in case func fails
 function try(func, catch) end
@@ -1375,13 +1375,13 @@ function unpack(tbl, startIndex, endIndex) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the starfall version.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L269).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L274).
 ---@return string # Starfall version
 function version() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Translates the specified position and angle into the specified coordinate system.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1189).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1194).
 ---@param pos Vector # The position that should be translated from the current to the new system
 ---@param ang Angle # The angles that should be translated from the current to the new system
 ---@param newSystemOrigin Vector # The origin of the system to translate to
@@ -1394,7 +1394,7 @@ function worldToLocal(pos, ang, newSystemOrigin, newSystemAngles) end
 --- Lua's xpcall with SF throw implementation, and a traceback for debugging.
 --- Attempts to call the first function. If the execution succeeds, this returns true followed by the returns of the function.
 --- If execution fails, this returns false and the second function is called with the error message, and the stack trace.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1103).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L1108).
 ---@param func function # The function to call initially.
 ---@param callback function # The function to be called if execution of the first fails; the error message and stack trace are passed.
 ---@param ... any # Varargs to pass to the initial function.

@@ -164,7 +164,7 @@ function render.computeLighting(pos, normal) end
 ---@param additive boolean? # If true, adds brightness to pixels behind it rather than drawing over them. Default false
 ---@param shadow boolean? # Enable drop shadow? Default false
 ---@param outline boolean? # Enable outline? Default false
----@param blursize boolean? # The size of the blur Default 0
+---@param blursize number? # The size of the blur Default 0
 ---@param extended boolean? # Allows the font to display glyphs outside of Latin-1 range. Unicode code points above 0xFFFF are not supported. Required to use FontAwesome
 ---@param scanlines number? # Scanline interval. Must be greater than 1 to work. Shares uniqueness with blursize so you cannot create more than one scanline type of font with the same blursize. Default 0
 ---@return string # The font name that can be used with the rest of the font functions.
@@ -544,7 +544,7 @@ function render.drawSimpleTextOutlined(x, y, text, outlinewidth, outlinecolor, x
 ---@param x number # X coordinate
 ---@param y number # Y coordinate
 ---@param text string # Text to draw
----@param alignment number # Horizontal text alignment. Default TEXT_ALIGN.LEFT
+---@param alignment number? # Horizontal text alignment. Default TEXT_ALIGN.LEFT
 function render.drawText(x, y, text, alignment) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
@@ -801,12 +801,12 @@ function render.isInRenderTarget() end
 function render.isInRenderView() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
---- Enables blend mode control. Read OpenGL or DirectX docs for more info.
+--- Enables or disables blend mode control. Read OpenGL or DirectX docs for more info.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L1980).
 ---@param on boolean # Whether to control the blend mode of upcoming rendering
----@param srcBlend number # http://wiki.facepunch.com/gmod/Enums/BLEND
----@param destBlend number #
----@param blendFunc number # http://wiki.facepunch.com/gmod/Enums/BLENDFUNC
+---@param srcBlend number? # http://wiki.facepunch.com/gmod/Enums/BLEND
+---@param destBlend number? #
+---@param blendFunc number? # http://wiki.facepunch.com/gmod/Enums/BLENDFUNC
 ---@param srcBlendAlpha number? # http://wiki.facepunch.com/gmod/Enums/BLEND
 ---@param destBlendAlpha number? #
 ---@param blendFuncAlpha number? # http://wiki.facepunch.com/gmod/Enums/BLENDFUNC
@@ -1051,9 +1051,9 @@ function render.setFont(font) end
 function render.setLightingMode(mode) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
---- Sets the current render material.
+--- Sets or resets the current render material.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L997).
----@param mat Material # The material object
+---@param mat Material? # The material object to use, or nil to reset
 function render.setMaterial(mat) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
