@@ -36,12 +36,14 @@ local function compileHooks(hooks)
 
 	file:write("---@alias HookName\n")
 
+	file:write("---| string # A custom hook name called when triggered by hook.run\n")
+
 	for i = 1, #hooks do
 		local hook = hooks[i]
 		file:write("---| '\"" .. hook.name .. "\"' # " .. hook.value.description:gsub("\n", " ") .. "\n")
 	end
 
-	file:write("---| string # A custom hook name called when triggered by hook.run\n\n")
+	file:write("\n")
 
 	for i = 1, #hooks do
 		local hook = hooks[i]
