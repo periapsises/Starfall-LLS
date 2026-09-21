@@ -295,19 +295,26 @@ function ProjectedTexture:setTexture(texture) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the Projected Texture's texture frame.
 --- Will not take effect until ProjectedTexture:update() is called.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/light.lua#L585).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/light.lua#L597).
 ---@param frame number #
 function ProjectedTexture:setTextureFrame(frame) end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
+--- Sets the Projected Texture's texture from a render target.
+--- Will not take effect until ProjectedTexture:update() is called.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/light.lua#L585).
+---@param name string #
+function ProjectedTexture:setTextureRenderTarget(name) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the Projected Texture's vertical FOV.
 --- Clamped between 0 and 180.
 --- Will not take effect until ProjectedTexture:update() is called.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/light.lua#L592).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/light.lua#L604).
 ---@param fov number #
 function ProjectedTexture:setVerticalFOV(fov) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Updates the Projected Texture with whatever paremeters were previously set.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/light.lua#L600).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/light.lua#L612).
 function ProjectedTexture:update() end
