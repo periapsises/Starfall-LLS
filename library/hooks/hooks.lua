@@ -97,7 +97,7 @@
 ---| '"PostEntityTakeDamage"' #  Called when an entity is damaged, after EntityTakeDamage is processed.
 ---| '"PreDrawHUD"' #  Called before drawing HUD (2D Context)
 ---| '"PreDrawOpaqueRenderables"' #  Called before opaque entities are drawn. (Only works with HUD) (3D context)
----| '"PreDrawPlayer"' #  Called before drawing the player. (Only works with HUD) (3D Context)
+---| '"PreDrawPlayer"' #  Called before drawing the player. (Only works with HUD) (3D Context) Rendering using this hook may cause other effects or colors on the player to not work
 ---| '"PreDrawSkyBox"' #  Called before the 3D skybox is drawn. This will not be called for maps with no 3D skybox, or when the 3d skybox is disabled
 ---| '"PreDrawTranslucentRenderables"' #  Called before translucent entities are drawn. (Only works with HUD) (3D context)
 ---| '"PreDrawViewModels"' #  Called before drawing the viewmodel rendergroup (3D Context)
@@ -113,6 +113,7 @@
 ---| '"SetupMove"' #  Called each UserCmd for each player to transfer information from the UserCmd to the CMoveData before the move is processed.
 ---| '"SetupSkyboxFog"' #  Called when skybox fog is drawn.
 ---| '"SetupWorldFog"' #  Called when world fog is drawn.
+---| '"ShouldDrawPlayer"' #  Return false to prevent rendering a player
 ---| '"StarfallError"' #  Called when starfall chip errors
 ---| '"StarfallUsed"' #  Called when a player uses the screen
 ---| '"StartChat"' #  Called when the local player opens their chat window.
@@ -244,6 +245,7 @@
 ---@alias SetupMove fun(ply: Player, move: CMoveData, cmd: CUserCmd)
 ---@alias SetupSkyboxFog fun(scale: number)
 ---@alias SetupWorldFog fun()
+---@alias ShouldDrawPlayer fun(ply: Player, flags: number) : boolean
 ---@alias StarfallError fun(ent: Entity, ply: Player|Entity, err: string)
 ---@alias StarfallUsed fun(activator: Player, used: Entity)
 ---@alias StartChat fun(isTeamChat: boolean)
