@@ -14,6 +14,12 @@ local Material = {}
 function Material:destroy() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
+--- Given a texture key, reloads file-based textures from disk, or clears render target textures.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/material.lua#L666).
+---@param key string # The material key name that has the texture. $basetexture is the key name for most purposes.
+function Material:downloadTexture(key) end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns a color pixel value of the $basetexture of a .png or .jpg material.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/material.lua#L446).
 ---@param x number # The x coordinate of the pixel
