@@ -7,7 +7,7 @@ particleEffect = {}
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Creates a particle effect (and attaches it to an entity).
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle_effect.lua#L204).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle_effect.lua#L67).
 ---@param entity Entity # The entity to attach the particle effect to (can be world)
 ---@param name string # The name of the effect to create (e.g. "generic_smoke")
 ---@param pattach number # See PATTACH enum
