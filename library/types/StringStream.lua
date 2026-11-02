@@ -58,7 +58,7 @@ function StringStream:readInt8() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns a null terminated string, reads until "\x00" and advances the buffer pointer.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/bit.lua#L434).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/bit.lua#L435).
 ---@return string # The string of bytes read
 function StringStream:readString() end
 
@@ -81,11 +81,12 @@ function StringStream:readUInt32() end
 function StringStream:readUInt8() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Reads until the given byte and advances the buffer pointer.
+--- Reads until the given byte and advances the buffer pointer. Will return until end of stream if no matching byte is found.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/bit.lua#L404).
 ---@param byte number # The byte to read until (in number form)
+---@param trim boolean # Return without the 'read to' byte
 ---@return string # The string of bytes read
-function StringStream:readUntil(byte) end
+function StringStream:readUntil(byte, trim) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Sets internal pointer to pos. The position will be clamped to [1, buffersize+1].
